@@ -1,0 +1,1290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbc940850377cd4fbf9932a82900d1c789Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BridgeRegNoItemS2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="RegId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS3">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS4">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS5">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS6">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS7">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+        </EntityType>
+        <EntityType Name="BridgeRegNosItemS8">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+        </EntityType>
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Producer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" />
+          <Property Name="ItemId" Type="nvarchar" MaxLength="50" />
+          <Property Name="ItemSerial" Type="nvarchar" MaxLength="50" />
+          <Property Name="OtherInfo" Type="nvarchar" MaxLength="250" />
+          <Property Name="DateofPurchase" Type="datetime" />
+          <Property Name="ReceiptImage" Type="nvarchar" MaxLength="50" />
+          <Property Name="BoolDateOfPurchase" Type="bit" />
+          <Property Name="BoolPlace" Type="bit" />
+          <Property Name="BoolItem" Type="bit" />
+          <Property Name="BoolAdress" Type="bit" />
+          <Property Name="BoolFirstName" Type="bit" />
+          <Property Name="BoolLastName" Type="bit" />
+          <Property Name="BoolPhoneNo" Type="bit" />
+          <Property Name="BoolEmail" Type="bit" />
+          <Property Name="BoolReceipt" Type="bit" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="userId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="PaidStatus" Type="bit" />
+          <Property Name="TimeStamp" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="userId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="PaidStatus" Type="bit" />
+          <Property Name="TimeStamp" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS3">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="userId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="PaidStatus" Type="bit" />
+          <Property Name="TimeStamp" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS4">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="userId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="PaidStatus" Type="bit" />
+          <Property Name="TimeStamp" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS5">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="userId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="PaidStatus" Type="bit" />
+          <Property Name="TimeStamp" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS6">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="userId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="PaidStatus" Type="bit" />
+          <Property Name="TimeStamp" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS7">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="userId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="PaidStatus" Type="bit" />
+          <Property Name="TimeStamp" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS8">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="userId" Type="int" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="PaidStatus" Type="bit" />
+          <Property Name="TimeStamp" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DeviceId" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Dob" Type="date" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adress" Type="varchar" MaxLength="50" />
+          <Property Name="ZipCode" Type="varchar" MaxLength="50" />
+          <Property Name="Place" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_BridgeRegNoItemS2_Items">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemS2" Type="Self.BridgeRegNoItemS2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemS2">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemS2_RegistrationNoS2">
+          <End Role="RegistrationNoS2" Type="Self.RegistrationNoS2" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemS2" Type="Self.BridgeRegNoItemS2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS2">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemS2">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS1_Items">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS1" Type="Self.BridgeRegNoItemsS1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS1">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS1_RegistrationNoS1">
+          <End Role="RegistrationNoS1" Type="Self.RegistrationNoS1" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS1" Type="Self.BridgeRegNoItemsS1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS1">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS1">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS3_Items">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS3" Type="Self.BridgeRegNoItemsS3" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS3">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS3_RegistrationNoS3">
+          <End Role="RegistrationNoS3" Type="Self.RegistrationNoS3" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS3" Type="Self.BridgeRegNoItemsS3" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS3">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS3">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS4_Items">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS4" Type="Self.BridgeRegNoItemsS4" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS4">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS4_RegistrationNoS4">
+          <End Role="RegistrationNoS4" Type="Self.RegistrationNoS4" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS4" Type="Self.BridgeRegNoItemsS4" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS4">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS4">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS5_Items">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS5" Type="Self.BridgeRegNoItemsS5" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS5">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS5_RegistrationNoS5">
+          <End Role="RegistrationNoS5" Type="Self.RegistrationNoS5" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS5" Type="Self.BridgeRegNoItemsS5" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS5">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS5">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS6_Items">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS6" Type="Self.BridgeRegNoItemsS6" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS6">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS6_RegistrationNoS6">
+          <End Role="RegistrationNoS6" Type="Self.RegistrationNoS6" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS6" Type="Self.BridgeRegNoItemsS6" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS6">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS6">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS7_Items">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS7" Type="Self.BridgeRegNoItemsS7" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS7">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS7_RegistrationNoS7">
+          <End Role="RegistrationNoS7" Type="Self.RegistrationNoS7" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS7" Type="Self.BridgeRegNoItemsS7" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS7">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS7">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNosItemS8_Items">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="BridgeRegNosItemS8" Type="Self.BridgeRegNosItemS8" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNosItemS8">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNosItemS8_RegistrationNoS8">
+          <End Role="RegistrationNoS8" Type="Self.RegistrationNoS8" Multiplicity="0..1" />
+          <End Role="BridgeRegNosItemS8" Type="Self.BridgeRegNosItemS8" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS8">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNosItemS8">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS1_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="RegistrationNoS1" Type="Self.RegistrationNoS1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS1">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbc940850377cd4fbf9932a82900d1c789ModelStoreContainer">
+          <EntitySet Name="BridgeRegNoItemS2" EntityType="Self.BridgeRegNoItemS2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BridgeRegNoItemsS1" EntityType="Self.BridgeRegNoItemsS1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BridgeRegNoItemsS3" EntityType="Self.BridgeRegNoItemsS3" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BridgeRegNoItemsS4" EntityType="Self.BridgeRegNoItemsS4" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BridgeRegNoItemsS5" EntityType="Self.BridgeRegNoItemsS5" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BridgeRegNoItemsS6" EntityType="Self.BridgeRegNoItemsS6" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BridgeRegNoItemsS7" EntityType="Self.BridgeRegNoItemsS7" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BridgeRegNosItemS8" EntityType="Self.BridgeRegNosItemS8" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrationNoS1" EntityType="Self.RegistrationNoS1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrationNoS2" EntityType="Self.RegistrationNoS2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrationNoS3" EntityType="Self.RegistrationNoS3" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrationNoS4" EntityType="Self.RegistrationNoS4" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrationNoS5" EntityType="Self.RegistrationNoS5" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrationNoS6" EntityType="Self.RegistrationNoS6" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrationNoS7" EntityType="Self.RegistrationNoS7" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrationNoS8" EntityType="Self.RegistrationNoS8" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BridgeRegNoItemS2_Items" Association="Self.FK_BridgeRegNoItemS2_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemS2" EntitySet="BridgeRegNoItemS2" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemS2_RegistrationNoS2" Association="Self.FK_BridgeRegNoItemS2_RegistrationNoS2">
+            <End Role="RegistrationNoS2" EntitySet="RegistrationNoS2" />
+            <End Role="BridgeRegNoItemS2" EntitySet="BridgeRegNoItemS2" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS1_Items" Association="Self.FK_BridgeRegNoItemsS1_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS1" EntitySet="BridgeRegNoItemsS1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS1_RegistrationNoS1" Association="Self.FK_BridgeRegNoItemsS1_RegistrationNoS1">
+            <End Role="RegistrationNoS1" EntitySet="RegistrationNoS1" />
+            <End Role="BridgeRegNoItemsS1" EntitySet="BridgeRegNoItemsS1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS3_Items" Association="Self.FK_BridgeRegNoItemsS3_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS3" EntitySet="BridgeRegNoItemsS3" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS3_RegistrationNoS3" Association="Self.FK_BridgeRegNoItemsS3_RegistrationNoS3">
+            <End Role="RegistrationNoS3" EntitySet="RegistrationNoS3" />
+            <End Role="BridgeRegNoItemsS3" EntitySet="BridgeRegNoItemsS3" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS4_Items" Association="Self.FK_BridgeRegNoItemsS4_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS4" EntitySet="BridgeRegNoItemsS4" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS4_RegistrationNoS4" Association="Self.FK_BridgeRegNoItemsS4_RegistrationNoS4">
+            <End Role="RegistrationNoS4" EntitySet="RegistrationNoS4" />
+            <End Role="BridgeRegNoItemsS4" EntitySet="BridgeRegNoItemsS4" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS5_Items" Association="Self.FK_BridgeRegNoItemsS5_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS5" EntitySet="BridgeRegNoItemsS5" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS5_RegistrationNoS5" Association="Self.FK_BridgeRegNoItemsS5_RegistrationNoS5">
+            <End Role="RegistrationNoS5" EntitySet="RegistrationNoS5" />
+            <End Role="BridgeRegNoItemsS5" EntitySet="BridgeRegNoItemsS5" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS6_Items" Association="Self.FK_BridgeRegNoItemsS6_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS6" EntitySet="BridgeRegNoItemsS6" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS6_RegistrationNoS6" Association="Self.FK_BridgeRegNoItemsS6_RegistrationNoS6">
+            <End Role="RegistrationNoS6" EntitySet="RegistrationNoS6" />
+            <End Role="BridgeRegNoItemsS6" EntitySet="BridgeRegNoItemsS6" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS7_Items" Association="Self.FK_BridgeRegNoItemsS7_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS7" EntitySet="BridgeRegNoItemsS7" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS7_RegistrationNoS7" Association="Self.FK_BridgeRegNoItemsS7_RegistrationNoS7">
+            <End Role="RegistrationNoS7" EntitySet="RegistrationNoS7" />
+            <End Role="BridgeRegNoItemsS7" EntitySet="BridgeRegNoItemsS7" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNosItemS8_Items" Association="Self.FK_BridgeRegNosItemS8_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNosItemS8" EntitySet="BridgeRegNosItemS8" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNosItemS8_RegistrationNoS8" Association="Self.FK_BridgeRegNosItemS8_RegistrationNoS8">
+            <End Role="RegistrationNoS8" EntitySet="RegistrationNoS8" />
+            <End Role="BridgeRegNosItemS8" EntitySet="BridgeRegNosItemS8" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS1_User" Association="Self.FK_RegistrationNoS1_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="RegistrationNoS1" EntitySet="RegistrationNoS1" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbc940850377cd4fbf9932a82900d1c789Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BridgeRegNoItemS2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <NavigationProperty Name="Item" Relationship="Self.FK_BridgeRegNoItemS2_Items" FromRole="BridgeRegNoItemS2" ToRole="Items" />
+          <NavigationProperty Name="RegistrationNoS2" Relationship="Self.FK_BridgeRegNoItemS2_RegistrationNoS2" FromRole="BridgeRegNoItemS2" ToRole="RegistrationNoS2" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="RegId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <NavigationProperty Name="Item" Relationship="Self.FK_BridgeRegNoItemsS1_Items" FromRole="BridgeRegNoItemsS1" ToRole="Items" />
+          <NavigationProperty Name="RegistrationNoS1" Relationship="Self.FK_BridgeRegNoItemsS1_RegistrationNoS1" FromRole="BridgeRegNoItemsS1" ToRole="RegistrationNoS1" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS3">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <NavigationProperty Name="Item" Relationship="Self.FK_BridgeRegNoItemsS3_Items" FromRole="BridgeRegNoItemsS3" ToRole="Items" />
+          <NavigationProperty Name="RegistrationNoS3" Relationship="Self.FK_BridgeRegNoItemsS3_RegistrationNoS3" FromRole="BridgeRegNoItemsS3" ToRole="RegistrationNoS3" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS4">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <NavigationProperty Name="Item" Relationship="Self.FK_BridgeRegNoItemsS4_Items" FromRole="BridgeRegNoItemsS4" ToRole="Items" />
+          <NavigationProperty Name="RegistrationNoS4" Relationship="Self.FK_BridgeRegNoItemsS4_RegistrationNoS4" FromRole="BridgeRegNoItemsS4" ToRole="RegistrationNoS4" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS5">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <NavigationProperty Name="Item" Relationship="Self.FK_BridgeRegNoItemsS5_Items" FromRole="BridgeRegNoItemsS5" ToRole="Items" />
+          <NavigationProperty Name="RegistrationNoS5" Relationship="Self.FK_BridgeRegNoItemsS5_RegistrationNoS5" FromRole="BridgeRegNoItemsS5" ToRole="RegistrationNoS5" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS6">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <NavigationProperty Name="Item" Relationship="Self.FK_BridgeRegNoItemsS6_Items" FromRole="BridgeRegNoItemsS6" ToRole="Items" />
+          <NavigationProperty Name="RegistrationNoS6" Relationship="Self.FK_BridgeRegNoItemsS6_RegistrationNoS6" FromRole="BridgeRegNoItemsS6" ToRole="RegistrationNoS6" />
+        </EntityType>
+        <EntityType Name="BridgeRegNoItemsS7">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <NavigationProperty Name="Item" Relationship="Self.FK_BridgeRegNoItemsS7_Items" FromRole="BridgeRegNoItemsS7" ToRole="Items" />
+          <NavigationProperty Name="RegistrationNoS7" Relationship="Self.FK_BridgeRegNoItemsS7_RegistrationNoS7" FromRole="BridgeRegNoItemsS7" ToRole="RegistrationNoS7" />
+        </EntityType>
+        <EntityType Name="BridgeRegNosItemS8">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <NavigationProperty Name="Item" Relationship="Self.FK_BridgeRegNosItemS8_Items" FromRole="BridgeRegNosItemS8" ToRole="Items" />
+          <NavigationProperty Name="RegistrationNoS8" Relationship="Self.FK_BridgeRegNosItemS8_RegistrationNoS8" FromRole="BridgeRegNosItemS8" ToRole="RegistrationNoS8" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Producer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ItemId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ItemSerial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OtherInfo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DateofPurchase" Type="DateTime" Precision="3" />
+          <Property Name="ReceiptImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BoolDateOfPurchase" Type="Boolean" />
+          <Property Name="BoolPlace" Type="Boolean" />
+          <Property Name="BoolItem" Type="Boolean" />
+          <Property Name="BoolAdress" Type="Boolean" />
+          <Property Name="BoolFirstName" Type="Boolean" />
+          <Property Name="BoolLastName" Type="Boolean" />
+          <Property Name="BoolPhoneNo" Type="Boolean" />
+          <Property Name="BoolEmail" Type="Boolean" />
+          <Property Name="BoolReceipt" Type="Boolean" />
+          <NavigationProperty Name="BridgeRegNoItemS2" Relationship="Self.FK_BridgeRegNoItemS2_Items" FromRole="Items" ToRole="BridgeRegNoItemS2" />
+          <NavigationProperty Name="BridgeRegNoItemsS1" Relationship="Self.FK_BridgeRegNoItemsS1_Items" FromRole="Items" ToRole="BridgeRegNoItemsS1" />
+          <NavigationProperty Name="BridgeRegNoItemsS3" Relationship="Self.FK_BridgeRegNoItemsS3_Items" FromRole="Items" ToRole="BridgeRegNoItemsS3" />
+          <NavigationProperty Name="BridgeRegNoItemsS4" Relationship="Self.FK_BridgeRegNoItemsS4_Items" FromRole="Items" ToRole="BridgeRegNoItemsS4" />
+          <NavigationProperty Name="BridgeRegNoItemsS5" Relationship="Self.FK_BridgeRegNoItemsS5_Items" FromRole="Items" ToRole="BridgeRegNoItemsS5" />
+          <NavigationProperty Name="BridgeRegNoItemsS6" Relationship="Self.FK_BridgeRegNoItemsS6_Items" FromRole="Items" ToRole="BridgeRegNoItemsS6" />
+          <NavigationProperty Name="BridgeRegNoItemsS7" Relationship="Self.FK_BridgeRegNoItemsS7_Items" FromRole="Items" ToRole="BridgeRegNoItemsS7" />
+          <NavigationProperty Name="BridgeRegNosItemS8" Relationship="Self.FK_BridgeRegNosItemS8_Items" FromRole="Items" ToRole="BridgeRegNosItemS8" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <Property Name="PaidStatus" Type="Boolean" />
+          <Property Name="TimeStamp" Type="Time" Precision="7" />
+          <NavigationProperty Name="BridgeRegNoItemsS1" Relationship="Self.FK_BridgeRegNoItemsS1_RegistrationNoS1" FromRole="RegistrationNoS1" ToRole="BridgeRegNoItemsS1" />
+          <NavigationProperty Name="User" Relationship="Self.FK_RegistrationNoS1_User" FromRole="RegistrationNoS1" ToRole="User" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <Property Name="PaidStatus" Type="Boolean" />
+          <Property Name="TimeStamp" Type="Time" Precision="7" />
+          <NavigationProperty Name="BridgeRegNoItemS2" Relationship="Self.FK_BridgeRegNoItemS2_RegistrationNoS2" FromRole="RegistrationNoS2" ToRole="BridgeRegNoItemS2" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS3">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <Property Name="PaidStatus" Type="Boolean" />
+          <Property Name="TimeStamp" Type="Time" Precision="7" />
+          <NavigationProperty Name="BridgeRegNoItemsS3" Relationship="Self.FK_BridgeRegNoItemsS3_RegistrationNoS3" FromRole="RegistrationNoS3" ToRole="BridgeRegNoItemsS3" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS4">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <Property Name="PaidStatus" Type="Boolean" />
+          <Property Name="TimeStamp" Type="Time" Precision="7" />
+          <NavigationProperty Name="BridgeRegNoItemsS4" Relationship="Self.FK_BridgeRegNoItemsS4_RegistrationNoS4" FromRole="RegistrationNoS4" ToRole="BridgeRegNoItemsS4" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS5">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <Property Name="PaidStatus" Type="Boolean" />
+          <Property Name="TimeStamp" Type="Time" Precision="7" />
+          <NavigationProperty Name="BridgeRegNoItemsS5" Relationship="Self.FK_BridgeRegNoItemsS5_RegistrationNoS5" FromRole="RegistrationNoS5" ToRole="BridgeRegNoItemsS5" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS6">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <Property Name="PaidStatus" Type="Boolean" />
+          <Property Name="TimeStamp" Type="Time" Precision="7" />
+          <NavigationProperty Name="BridgeRegNoItemsS6" Relationship="Self.FK_BridgeRegNoItemsS6_RegistrationNoS6" FromRole="RegistrationNoS6" ToRole="BridgeRegNoItemsS6" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS7">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <Property Name="PaidStatus" Type="Boolean" />
+          <Property Name="TimeStamp" Type="Time" Precision="7" />
+          <NavigationProperty Name="BridgeRegNoItemsS7" Relationship="Self.FK_BridgeRegNoItemsS7_RegistrationNoS7" FromRole="RegistrationNoS7" ToRole="BridgeRegNoItemsS7" />
+        </EntityType>
+        <EntityType Name="RegistrationNoS8">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userId" Type="Int32" />
+          <Property Name="ItemId" Type="Int32" />
+          <Property Name="PaidStatus" Type="Boolean" />
+          <Property Name="TimeStamp" Type="Time" Precision="7" />
+          <NavigationProperty Name="BridgeRegNosItemS8" Relationship="Self.FK_BridgeRegNosItemS8_RegistrationNoS8" FromRole="RegistrationNoS8" ToRole="BridgeRegNosItemS8" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeviceId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Dob" Type="DateTime" Precision="0" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Place" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="RegistrationNoS1" Relationship="Self.FK_RegistrationNoS1_User" FromRole="User" ToRole="RegistrationNoS1" />
+        </EntityType>
+        <Association Name="FK_BridgeRegNoItemS2_Items">
+          <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemS2" Type="Self.BridgeRegNoItemS2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemS2">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemS2_RegistrationNoS2">
+          <End Role="RegistrationNoS2" Type="Self.RegistrationNoS2" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemS2" Type="Self.BridgeRegNoItemS2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS2">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemS2">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS1_Items">
+          <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS1" Type="Self.BridgeRegNoItemsS1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS1">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS1_RegistrationNoS1">
+          <End Role="RegistrationNoS1" Type="Self.RegistrationNoS1" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS1" Type="Self.BridgeRegNoItemsS1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS1">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS1">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS3_Items">
+          <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS3" Type="Self.BridgeRegNoItemsS3" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS3">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS3_RegistrationNoS3">
+          <End Role="RegistrationNoS3" Type="Self.RegistrationNoS3" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS3" Type="Self.BridgeRegNoItemsS3" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS3">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS3">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS4_Items">
+          <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS4" Type="Self.BridgeRegNoItemsS4" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS4">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS4_RegistrationNoS4">
+          <End Role="RegistrationNoS4" Type="Self.RegistrationNoS4" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS4" Type="Self.BridgeRegNoItemsS4" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS4">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS4">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS5_Items">
+          <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS5" Type="Self.BridgeRegNoItemsS5" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS5">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS5_RegistrationNoS5">
+          <End Role="RegistrationNoS5" Type="Self.RegistrationNoS5" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS5" Type="Self.BridgeRegNoItemsS5" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS5">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS5">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS6_Items">
+          <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS6" Type="Self.BridgeRegNoItemsS6" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS6">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS6_RegistrationNoS6">
+          <End Role="RegistrationNoS6" Type="Self.RegistrationNoS6" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS6" Type="Self.BridgeRegNoItemsS6" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS6">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS6">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS7_Items">
+          <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS7" Type="Self.BridgeRegNoItemsS7" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS7">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNoItemsS7_RegistrationNoS7">
+          <End Role="RegistrationNoS7" Type="Self.RegistrationNoS7" Multiplicity="0..1" />
+          <End Role="BridgeRegNoItemsS7" Type="Self.BridgeRegNoItemsS7" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS7">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNoItemsS7">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNosItemS8_Items">
+          <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+          <End Role="BridgeRegNosItemS8" Type="Self.BridgeRegNosItemS8" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNosItemS8">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BridgeRegNosItemS8_RegistrationNoS8">
+          <End Role="RegistrationNoS8" Type="Self.RegistrationNoS8" Multiplicity="0..1" />
+          <End Role="BridgeRegNosItemS8" Type="Self.BridgeRegNosItemS8" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegistrationNoS8">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BridgeRegNosItemS8">
+              <PropertyRef Name="RegId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS1_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="RegistrationNoS1" Type="Self.RegistrationNoS1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS1">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RegisterOwnersContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BridgeRegNoItemS2" EntityType="Self.BridgeRegNoItemS2" />
+          <EntitySet Name="BridgeRegNoItemsS1" EntityType="Self.BridgeRegNoItemsS1" />
+          <EntitySet Name="BridgeRegNoItemsS3" EntityType="Self.BridgeRegNoItemsS3" />
+          <EntitySet Name="BridgeRegNoItemsS4" EntityType="Self.BridgeRegNoItemsS4" />
+          <EntitySet Name="BridgeRegNoItemsS5" EntityType="Self.BridgeRegNoItemsS5" />
+          <EntitySet Name="BridgeRegNoItemsS6" EntityType="Self.BridgeRegNoItemsS6" />
+          <EntitySet Name="BridgeRegNoItemsS7" EntityType="Self.BridgeRegNoItemsS7" />
+          <EntitySet Name="BridgeRegNosItemS8" EntityType="Self.BridgeRegNosItemS8" />
+          <EntitySet Name="Items" EntityType="Self.Item" />
+          <EntitySet Name="RegistrationNoS1" EntityType="Self.RegistrationNoS1" />
+          <EntitySet Name="RegistrationNoS2" EntityType="Self.RegistrationNoS2" />
+          <EntitySet Name="RegistrationNoS3" EntityType="Self.RegistrationNoS3" />
+          <EntitySet Name="RegistrationNoS4" EntityType="Self.RegistrationNoS4" />
+          <EntitySet Name="RegistrationNoS5" EntityType="Self.RegistrationNoS5" />
+          <EntitySet Name="RegistrationNoS6" EntityType="Self.RegistrationNoS6" />
+          <EntitySet Name="RegistrationNoS7" EntityType="Self.RegistrationNoS7" />
+          <EntitySet Name="RegistrationNoS8" EntityType="Self.RegistrationNoS8" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_BridgeRegNoItemS2_Items" Association="Self.FK_BridgeRegNoItemS2_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemS2" EntitySet="BridgeRegNoItemS2" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemS2_RegistrationNoS2" Association="Self.FK_BridgeRegNoItemS2_RegistrationNoS2">
+            <End Role="RegistrationNoS2" EntitySet="RegistrationNoS2" />
+            <End Role="BridgeRegNoItemS2" EntitySet="BridgeRegNoItemS2" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS1_Items" Association="Self.FK_BridgeRegNoItemsS1_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS1" EntitySet="BridgeRegNoItemsS1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS1_RegistrationNoS1" Association="Self.FK_BridgeRegNoItemsS1_RegistrationNoS1">
+            <End Role="RegistrationNoS1" EntitySet="RegistrationNoS1" />
+            <End Role="BridgeRegNoItemsS1" EntitySet="BridgeRegNoItemsS1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS3_Items" Association="Self.FK_BridgeRegNoItemsS3_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS3" EntitySet="BridgeRegNoItemsS3" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS3_RegistrationNoS3" Association="Self.FK_BridgeRegNoItemsS3_RegistrationNoS3">
+            <End Role="RegistrationNoS3" EntitySet="RegistrationNoS3" />
+            <End Role="BridgeRegNoItemsS3" EntitySet="BridgeRegNoItemsS3" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS4_Items" Association="Self.FK_BridgeRegNoItemsS4_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS4" EntitySet="BridgeRegNoItemsS4" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS4_RegistrationNoS4" Association="Self.FK_BridgeRegNoItemsS4_RegistrationNoS4">
+            <End Role="RegistrationNoS4" EntitySet="RegistrationNoS4" />
+            <End Role="BridgeRegNoItemsS4" EntitySet="BridgeRegNoItemsS4" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS5_Items" Association="Self.FK_BridgeRegNoItemsS5_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS5" EntitySet="BridgeRegNoItemsS5" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS5_RegistrationNoS5" Association="Self.FK_BridgeRegNoItemsS5_RegistrationNoS5">
+            <End Role="RegistrationNoS5" EntitySet="RegistrationNoS5" />
+            <End Role="BridgeRegNoItemsS5" EntitySet="BridgeRegNoItemsS5" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS6_Items" Association="Self.FK_BridgeRegNoItemsS6_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS6" EntitySet="BridgeRegNoItemsS6" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS6_RegistrationNoS6" Association="Self.FK_BridgeRegNoItemsS6_RegistrationNoS6">
+            <End Role="RegistrationNoS6" EntitySet="RegistrationNoS6" />
+            <End Role="BridgeRegNoItemsS6" EntitySet="BridgeRegNoItemsS6" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS7_Items" Association="Self.FK_BridgeRegNoItemsS7_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNoItemsS7" EntitySet="BridgeRegNoItemsS7" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNoItemsS7_RegistrationNoS7" Association="Self.FK_BridgeRegNoItemsS7_RegistrationNoS7">
+            <End Role="RegistrationNoS7" EntitySet="RegistrationNoS7" />
+            <End Role="BridgeRegNoItemsS7" EntitySet="BridgeRegNoItemsS7" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNosItemS8_Items" Association="Self.FK_BridgeRegNosItemS8_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="BridgeRegNosItemS8" EntitySet="BridgeRegNosItemS8" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BridgeRegNosItemS8_RegistrationNoS8" Association="Self.FK_BridgeRegNosItemS8_RegistrationNoS8">
+            <End Role="RegistrationNoS8" EntitySet="RegistrationNoS8" />
+            <End Role="BridgeRegNosItemS8" EntitySet="BridgeRegNosItemS8" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS1_User" Association="Self.FK_RegistrationNoS1_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="RegistrationNoS1" EntitySet="RegistrationNoS1" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbc940850377cd4fbf9932a82900d1c789ModelStoreContainer" CdmEntityContainer="RegisterOwnersContext">
+          <EntitySetMapping Name="BridgeRegNoItemS2">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemS2">
+              <MappingFragment StoreEntitySet="BridgeRegNoItemS2">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegId" ColumnName="RegId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BridgeRegNoItemsS1">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS1">
+              <MappingFragment StoreEntitySet="BridgeRegNoItemsS1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegId" ColumnName="RegId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BridgeRegNoItemsS3">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS3">
+              <MappingFragment StoreEntitySet="BridgeRegNoItemsS3">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegId" ColumnName="RegId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BridgeRegNoItemsS4">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS4">
+              <MappingFragment StoreEntitySet="BridgeRegNoItemsS4">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegId" ColumnName="RegId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BridgeRegNoItemsS5">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS5">
+              <MappingFragment StoreEntitySet="BridgeRegNoItemsS5">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegId" ColumnName="RegId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BridgeRegNoItemsS6">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS6">
+              <MappingFragment StoreEntitySet="BridgeRegNoItemsS6">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegId" ColumnName="RegId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BridgeRegNoItemsS7">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS7">
+              <MappingFragment StoreEntitySet="BridgeRegNoItemsS7">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegId" ColumnName="RegId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BridgeRegNosItemS8">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNosItemS8">
+              <MappingFragment StoreEntitySet="BridgeRegNosItemS8">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegId" ColumnName="RegId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.Item">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Producer" ColumnName="Producer" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="ItemSerial" ColumnName="ItemSerial" />
+                <ScalarProperty Name="OtherInfo" ColumnName="OtherInfo" />
+                <ScalarProperty Name="DateofPurchase" ColumnName="DateofPurchase" />
+                <ScalarProperty Name="ReceiptImage" ColumnName="ReceiptImage" />
+                <ScalarProperty Name="BoolDateOfPurchase" ColumnName="BoolDateOfPurchase" />
+                <ScalarProperty Name="BoolPlace" ColumnName="BoolPlace" />
+                <ScalarProperty Name="BoolItem" ColumnName="BoolItem" />
+                <ScalarProperty Name="BoolAdress" ColumnName="BoolAdress" />
+                <ScalarProperty Name="BoolFirstName" ColumnName="BoolFirstName" />
+                <ScalarProperty Name="BoolLastName" ColumnName="BoolLastName" />
+                <ScalarProperty Name="BoolPhoneNo" ColumnName="BoolPhoneNo" />
+                <ScalarProperty Name="BoolEmail" ColumnName="BoolEmail" />
+                <ScalarProperty Name="BoolReceipt" ColumnName="BoolReceipt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrationNoS1">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS1">
+              <MappingFragment StoreEntitySet="RegistrationNoS1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="PaidStatus" ColumnName="PaidStatus" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrationNoS2">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS2">
+              <MappingFragment StoreEntitySet="RegistrationNoS2">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="PaidStatus" ColumnName="PaidStatus" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrationNoS3">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS3">
+              <MappingFragment StoreEntitySet="RegistrationNoS3">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="PaidStatus" ColumnName="PaidStatus" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrationNoS4">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS4">
+              <MappingFragment StoreEntitySet="RegistrationNoS4">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="PaidStatus" ColumnName="PaidStatus" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrationNoS5">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS5">
+              <MappingFragment StoreEntitySet="RegistrationNoS5">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="PaidStatus" ColumnName="PaidStatus" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrationNoS6">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS6">
+              <MappingFragment StoreEntitySet="RegistrationNoS6">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="PaidStatus" ColumnName="PaidStatus" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrationNoS7">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS7">
+              <MappingFragment StoreEntitySet="RegistrationNoS7">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="PaidStatus" ColumnName="PaidStatus" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrationNoS8">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS8">
+              <MappingFragment StoreEntitySet="RegistrationNoS8">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="PaidStatus" ColumnName="PaidStatus" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Dob" ColumnName="Dob" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="Place" ColumnName="Place" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

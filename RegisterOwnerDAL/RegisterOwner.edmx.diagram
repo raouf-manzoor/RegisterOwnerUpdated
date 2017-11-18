@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a25fbd7084fc41d7b724b2df60aea4e9" Name="Diagram1">
+        <EntityTypeShape EntityType="RegisterOwnerModel.BridgeRegNoItemS2" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.BridgeRegNoItemsS1" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.BridgeRegNoItemsS3" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.BridgeRegNoItemsS4" Width="1.5" PointX="6" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.BridgeRegNoItemsS5" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.BridgeRegNoItemsS6" Width="1.5" PointX="6" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.BridgeRegNoItemsS7" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.BridgeRegNosItemS8" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.Item" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.RegistrationNoS1" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.RegistrationNoS2" Width="1.5" PointX="0.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.RegistrationNoS3" Width="1.5" PointX="0.75" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.RegistrationNoS4" Width="1.5" PointX="3.75" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.RegistrationNoS5" Width="1.5" PointX="3.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.RegistrationNoS6" Width="1.5" PointX="3.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.RegistrationNoS7" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.RegistrationNoS8" Width="1.5" PointX="0.75" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegisterOwnerModel.User" Width="1.5" PointX="1.5" PointY="20.75" IsExpanded="true" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemS2_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemS2_RegistrationNoS2" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS1_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS1_RegistrationNoS1" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS3_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS3_RegistrationNoS3" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS4_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS4_RegistrationNoS4" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS5_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS5_RegistrationNoS5" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS6_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS6_RegistrationNoS6" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS7_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNoItemsS7_RegistrationNoS7" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNosItemS8_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_BridgeRegNosItemS8_RegistrationNoS8" ManuallyRouted="false" />
+        <AssociationConnector Association="RegisterOwnerModel.FK_RegistrationNoS1_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

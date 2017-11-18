@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a5956f47a50941b5af2385119239d81b" Name="Diagram1">
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemS2" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS1" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS3" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS4" Width="1.5" PointX="6" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS5" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS6" Width="1.5" PointX="6" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNoItemsS7" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.BridgeRegNosItemS8" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.Item" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS1" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS2" Width="1.5" PointX="0.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS3" Width="1.5" PointX="0.75" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS4" Width="1.5" PointX="3.75" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS5" Width="1.5" PointX="3.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS6" Width="1.5" PointX="3.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS7" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS8" Width="1.5" PointX="0.75" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.User" Width="1.5" PointX="1.5" PointY="20.75" IsExpanded="true" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemS2_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemS2_RegistrationNoS2" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS1_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS1_RegistrationNoS1" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS3_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS3_RegistrationNoS3" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS4_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS4_RegistrationNoS4" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS5_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS5_RegistrationNoS5" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS6_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS6_RegistrationNoS6" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS7_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNoItemsS7_RegistrationNoS7" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNosItemS8_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNosItemS8_RegistrationNoS8" ManuallyRouted="false" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS1_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
