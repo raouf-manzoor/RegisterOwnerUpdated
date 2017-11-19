@@ -14,14 +14,14 @@ namespace ContactManagementSystem26_10_17.Controllers
     {
         // GET api/values
 
-        [HttpPost]
-        public bool RegisterUser(User data)
-        {
-            var dbcontext = new RegisterOwnersContext();
-            dbcontext.Users.Add(data);
-            dbcontext.SaveChanges();
-            return true;
-        }
+        //[HttpPost]
+        //public bool RegisterUser(User data)
+        //{
+        //    var dbcontext = new RegisterOwnersContext();
+        //    dbcontext.Users.Add(data);
+        //    dbcontext.SaveChanges();
+        //    return true;
+        //}
         [HttpPost]
         public RegistrationUserData RegisterUser(User data)
         {
