@@ -48,7 +48,12 @@ namespace ContactManagementSystem26_10_17.Controllers
 
             }
         }
-
+        [HttpPost]
+        public User SignIn(User input)
+        {
+            var dbcontext = new RegisterOwnersContext();
+            return dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password);
+        }
     }
 
     public class RegistrationUserData
