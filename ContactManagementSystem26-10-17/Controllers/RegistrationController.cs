@@ -22,32 +22,40 @@ namespace ContactManagementSystem26_10_17.Controllers
             dbcontext.SaveChanges();
             return true;
         }
-        //[HttpPost]
-        //public dynamic RegisterUser(User data)
-        //{
-        //    try
-        //    {
-        //        var dbcontext = new RegisterOwnersContext();
-        //        dbcontext.Users.Add(data);
-        //        dbcontext.SaveChanges();
-        //        return new
-        //        {
-        //            IsUserRegisterd = true,
-        //            Message = "User Is Registered SuccessFully",
+        [HttpPost]
+        public RegistrationUserData RegisterUser(User data)
+        {
+            try
+            {
+                var dbcontext = new RegisterOwnersContext();
+                dbcontext.Users.Add(data);
+                dbcontext.SaveChanges();
+                return new RegistrationUserData
+                {
+                    IsUserRegisterd = true,
+                    Message = "User Is Registered SuccessFully",
+                    ErrorException=null
+                };
+            }
+            catch (Exception ex)
+            {
+                return new RegistrationUserData
+                {
+                    IsUserRegisterd = false,
+                    Message = "Internal Server Error",
+                    ErrorException = ex
+                };
 
-        //        };
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return new
-        //        {
-        //            IsUserRegisterd = false,
-        //            Message = "Internal Server Error",
-        //            ErrorException = ex
-        //        };
+            }
+        }
 
-        //    }
-        //}
+    }
 
+    public class RegistrationUserData
+    {
+        public bool IsUserRegisterd { get; set; }
+        public string Message { get; set; }
+        public Exception ErrorException { get; set; }
+        
     }
 }
