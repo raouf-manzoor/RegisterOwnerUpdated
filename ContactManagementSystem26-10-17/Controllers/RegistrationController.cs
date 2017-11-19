@@ -14,39 +14,40 @@ namespace ContactManagementSystem26_10_17.Controllers
     {
         // GET api/values
 
-        //[HttpPost]
-        //public void RegisterUser(User data)
-        //{
-        //    var dbcontext = new RegisterOwnersContext();
-        //    dbcontext.Users.Add(data);
-        //    dbcontext.SaveChanges();
-        //}
         [HttpPost]
-        public dynamic RegisterUser(User data)
+        public bool RegisterUser(User data)
         {
-            try
-            {
-                var dbcontext = new RegisterOwnersContext();
-                dbcontext.Users.Add(data);
-                dbcontext.SaveChanges();
-                return new
-                {
-                    IsUserRegisterd = true,
-                    Message = "User Is Registered SuccessFully",
-
-                };
-            }
-            catch (Exception ex)
-            {
-                return new
-                {
-                    IsUserRegisterd = false,
-                    Message = "Internal Server Error",
-                    ErrorException = ex
-                };
-
-            }
+            var dbcontext = new RegisterOwnersContext();
+            dbcontext.Users.Add(data);
+            dbcontext.SaveChanges();
+            return true;
         }
+        //[HttpPost]
+        //public dynamic RegisterUser(User data)
+        //{
+        //    try
+        //    {
+        //        var dbcontext = new RegisterOwnersContext();
+        //        dbcontext.Users.Add(data);
+        //        dbcontext.SaveChanges();
+        //        return new
+        //        {
+        //            IsUserRegisterd = true,
+        //            Message = "User Is Registered SuccessFully",
+
+        //        };
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return new
+        //        {
+        //            IsUserRegisterd = false,
+        //            Message = "Internal Server Error",
+        //            ErrorException = ex
+        //        };
+
+        //    }
+        //}
 
     }
 }
