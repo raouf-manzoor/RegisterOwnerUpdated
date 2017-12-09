@@ -1,4 +1,5 @@
-﻿using ContactManagementSystem26_10_17.RegisterOwnerDataBase;
+﻿using AutoMapper;
+using ContactManagementSystem26_10_17.RegisterOwnerDataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +35,7 @@ namespace ContactManagementSystem26_10_17.Controllers
                 {
                     IsUserRegisterd = true,
                     Message = "User Is Registered SuccessFully Hamza Hassan",
-                    ErrorException=null
+                    ErrorException = null
                 };
             }
             catch (Exception ex)
@@ -49,10 +50,16 @@ namespace ContactManagementSystem26_10_17.Controllers
             }
         }
         [HttpPost]
-        public User SignIn(User input)
+        public UserDto SignIn(User input)
         {
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<User, UserDto>();
+
+            });
             var dbcontext = new RegisterOwnersContext();
-            return dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password);
+            var userEntity = dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password);
+            return Mapper.Map<User, UserDto>(userEntity);
         }
     }
 
@@ -61,6 +68,25 @@ namespace ContactManagementSystem26_10_17.Controllers
         public bool IsUserRegisterd { get; set; }
         public string Message { get; set; }
         public Exception ErrorException { get; set; }
-        
+
+    }
+
+    public  class UserDto
+    {
+
+        public int Id { get; set; }
+        public string DeviceId { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public Nullable<System.DateTime> Dob { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Adress { get; set; }
+        public string ZipCode { get; set; }
+        public string Place { get; set; }
+        public string Country { get; set; }
+        public string MobileNo { get; set; }
+
+
     }
 }
