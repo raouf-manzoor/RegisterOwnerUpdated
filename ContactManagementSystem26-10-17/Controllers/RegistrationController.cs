@@ -33,7 +33,7 @@ namespace ContactManagementSystem26_10_17.Controllers
                 return new RegistrationUserData
                 {
                     IsUserRegisterd = true,
-                    Message = "User Is Registered SuccessFully",
+                    Message = "User Is Registered SuccessFully Hamza Hassan",
                     ErrorException=null
                 };
             }
