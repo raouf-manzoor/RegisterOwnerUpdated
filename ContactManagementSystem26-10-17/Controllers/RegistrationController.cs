@@ -50,11 +50,23 @@ namespace ContactManagementSystem26_10_17.Controllers
             }
         }
         [HttpPost]
-        public UserDto SignIn(User input)
+        public dynamic SignIn(User input)
         {
             var dbcontext = new RegisterOwnersContext();
             var userEntity = dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password);
-            return Mapper.Map<User, UserDto>(userEntity);
+            if (userEntity == null)
+                return new 
+                {
+                    IsSignedIn = false,
+                    Message = "User Does Not Exist",
+                };
+            return new
+            {
+                IsSignedIn = false,
+                Message = "SuccessFully SignedIn",
+                LogInResponse= Mapper.Map<User, UserDto>(userEntity)
+            };
+           // return Mapper.Map<User, UserDto>(userEntity);
         }
     }
 
