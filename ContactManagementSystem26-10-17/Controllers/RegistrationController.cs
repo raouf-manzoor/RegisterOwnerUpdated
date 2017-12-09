@@ -62,7 +62,7 @@ namespace ContactManagementSystem26_10_17.Controllers
                 };
             return new
             {
-                IsSignedIn = false,
+                IsSignedIn = true,
                 Message = "SuccessFully SignedIn",
                 LogInResponse= Mapper.Map<User, UserDto>(userEntity)
             };
