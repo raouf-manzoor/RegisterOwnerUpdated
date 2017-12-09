@@ -52,11 +52,6 @@ namespace ContactManagementSystem26_10_17.Controllers
         [HttpPost]
         public UserDto SignIn(User input)
         {
-            Mapper.Initialize(cfg =>
-            {
-                cfg.CreateMap<User, UserDto>();
-
-            });
             var dbcontext = new RegisterOwnersContext();
             var userEntity = dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password);
             return Mapper.Map<User, UserDto>(userEntity);

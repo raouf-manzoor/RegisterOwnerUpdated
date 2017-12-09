@@ -180,6 +180,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MappingInitializer.cs" />
     <Compile Include="Models\ContactDataBase.cs" />
     <Compile Include="Models\ContactInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
