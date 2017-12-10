@@ -157,6 +157,40 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
 
 
+                else if (input.Digits == 5)
+                {
+                    int fiveDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.FiveDigit) + 1;
+
+                    oneDigitString = Base36Converter.ConvertToBaseK(fiveDigit, 5);
+                    var regNos1Check = dbcontext.RegistrationNoS5.FirstOrDefault(e => e.RegNo == oneDigitString);
+
+                    while (regNos1Check != null)
+                    {
+                        fiveDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                        //oneDigit++;
+                        //oneDigitString = oneDigit.ToString();
+                        oneDigitString = Base36Converter.ConvertToBaseK(fiveDigit, 5);
+                        regNos1Check = dbcontext.RegistrationNoS5.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        //currentRegistrationNo.OneDigit = oneDigitString;
+                    }
+                    var regNos5 = new RegistrationNoS5()
+                    {
+                        RegNo = oneDigitString,
+                        userId = input.UserId,
+                        PaidStatus = true,
+                        TimeStamp = DateTime.Now.TimeOfDay
+                    };
+                    //oneDigit++;
+                    //oneDigitString = oneDigit.ToString();
+                    currentRegistrationNo.FiveDigit = oneDigitString;
+                    dbcontext.RegistrationNoS5.Add(regNos5);
+                    dbcontext.SaveChanges();
+
+
+
+                }
+
+
 
 
                 return new
