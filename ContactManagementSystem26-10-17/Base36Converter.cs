@@ -25,7 +25,7 @@ namespace ContactManagementSystem26_10_17
 
         }
 
-        public static UInt64 ConvertToBase10(string str)
+        public static int ConvertToBase10(string str)
         {
             var baseDef = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             double result = 0;
@@ -35,7 +35,7 @@ namespace ContactManagementSystem26_10_17
                 result += idxOfChar * System.Math.Pow(baseDef.Length, (str.Length - 1) - idx);
             }
 
-            return (UInt64)result;
+            return (int)result;
         }
     }
 }
