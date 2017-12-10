@@ -17,6 +17,13 @@ namespace ContactManagementSystem26_10_17.RegisterOwnerDataBase
         public User()
         {
             this.RegistrationNoS1 = new HashSet<RegistrationNoS1>();
+            this.RegistrationNoS3 = new HashSet<RegistrationNoS3>();
+            this.RegistrationNoS4 = new HashSet<RegistrationNoS4>();
+            this.RegistrationNoS5 = new HashSet<RegistrationNoS5>();
+            this.RegistrationNoS6 = new HashSet<RegistrationNoS6>();
+            this.RegistrationNoS7 = new HashSet<RegistrationNoS7>();
+            this.RegistrationNoS8 = new HashSet<RegistrationNoS8>();
+            this.RegistrationNoS2 = new HashSet<RegistrationNoS2>();
         }
     
         public int Id { get; set; }
@@ -33,5 +40,12 @@ namespace ContactManagementSystem26_10_17.RegisterOwnerDataBase
         public string MobileNo { get; set; }
     
         public virtual ICollection<RegistrationNoS1> RegistrationNoS1 { get; set; }
+        public virtual ICollection<RegistrationNoS3> RegistrationNoS3 { get; set; }
+        public virtual ICollection<RegistrationNoS4> RegistrationNoS4 { get; set; }
+        public virtual ICollection<RegistrationNoS5> RegistrationNoS5 { get; set; }
+        public virtual ICollection<RegistrationNoS6> RegistrationNoS6 { get; set; }
+        public virtual ICollection<RegistrationNoS7> RegistrationNoS7 { get; set; }
+        public virtual ICollection<RegistrationNoS8> RegistrationNoS8 { get; set; }
+        public virtual ICollection<RegistrationNoS2> RegistrationNoS2 { get; set; }
     }
 }

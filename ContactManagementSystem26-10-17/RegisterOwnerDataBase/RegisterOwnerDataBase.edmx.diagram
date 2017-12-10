@@ -42,6 +42,13 @@
         <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNosItemS8_RegistrationNoS8" ManuallyRouted="false" />
         <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS1_User" ManuallyRouted="false" />
         <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.CurrentRegistrationNo" Width="1.5" PointX="6.375" PointY="3.75" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS3_User" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS4_User" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS5_User" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS6_User" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS7_User" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS8_User" />
+        <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS2_User" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
