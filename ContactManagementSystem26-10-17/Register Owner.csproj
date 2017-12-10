@@ -138,7 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -260,6 +259,8 @@
     <Compile Include="RegisterOwnerDataBase\User.cs">
       <DependentUpon>RegisterOwnerDataBase.tt</DependentUpon>
     </Compile>
+    <Compile Include="Services\RegistrationNos\Dtos\GetRegistrationNoInput.cs" />
+    <Compile Include="Services\RegistrationNos\RegistrationNoAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
