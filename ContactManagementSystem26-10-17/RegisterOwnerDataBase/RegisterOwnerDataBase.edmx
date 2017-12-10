@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbc940850377cd4fbf9932a82900d1c789Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="dbc940850377cd4fbf9932a82900d1c789Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BridgeRegNoItemS2">
           <Key>
             <PropertyRef Name="Id" />
@@ -68,6 +68,20 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RegId" Type="int" />
           <Property Name="ItemId" Type="int" />
+        </EntityType>
+        <EntityType Name="CurrentRegistrationNo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OneDigit" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TwoDigit" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ThreeDigit" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FourDigit" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FiveDigit" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SixDigit" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SevenDigit" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EightDigit" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Items">
           <Key>
@@ -421,6 +435,7 @@
           <EntitySet Name="BridgeRegNoItemsS6" EntityType="Self.BridgeRegNoItemsS6" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BridgeRegNoItemsS7" EntityType="Self.BridgeRegNoItemsS7" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BridgeRegNosItemS8" EntityType="Self.BridgeRegNosItemS8" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CurrentRegistrationNo" EntityType="Self.CurrentRegistrationNo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RegistrationNoS1" EntityType="Self.RegistrationNoS1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RegistrationNoS2" EntityType="Self.RegistrationNoS2" Schema="dbo" store:Type="Tables" />
@@ -501,8 +516,7 @@
             <End Role="RegistrationNoS1" EntitySet="RegistrationNoS1" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbc940850377cd4fbf9932a82900d1c789Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1035,7 +1049,22 @@
             <End Role="User" EntitySet="Users" />
             <End Role="RegistrationNoS1" EntitySet="RegistrationNoS1" />
           </AssociationSet>
+          <EntitySet Name="CurrentRegistrationNoes" EntityType="dbc940850377cd4fbf9932a82900d1c789Model.CurrentRegistrationNo" />
         </EntityContainer>
+        <EntityType Name="CurrentRegistrationNo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OneDigit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TwoDigit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ThreeDigit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FourDigit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FiveDigit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SixDigit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SevenDigit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EightDigit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1261,6 +1290,21 @@
                 <ScalarProperty Name="Place" ColumnName="Place" />
                 <ScalarProperty Name="Country" ColumnName="Country" />
                 <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CurrentRegistrationNoes">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.CurrentRegistrationNo">
+              <MappingFragment StoreEntitySet="CurrentRegistrationNo">
+                <ScalarProperty Name="EightDigit" ColumnName="EightDigit" />
+                <ScalarProperty Name="SevenDigit" ColumnName="SevenDigit" />
+                <ScalarProperty Name="SixDigit" ColumnName="SixDigit" />
+                <ScalarProperty Name="FiveDigit" ColumnName="FiveDigit" />
+                <ScalarProperty Name="FourDigit" ColumnName="FourDigit" />
+                <ScalarProperty Name="ThreeDigit" ColumnName="ThreeDigit" />
+                <ScalarProperty Name="TwoDigit" ColumnName="TwoDigit" />
+                <ScalarProperty Name="OneDigit" ColumnName="OneDigit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

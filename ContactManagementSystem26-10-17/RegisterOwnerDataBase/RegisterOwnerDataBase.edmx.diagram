@@ -41,6 +41,7 @@
         <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNosItemS8_Items" ManuallyRouted="false" />
         <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_BridgeRegNosItemS8_RegistrationNoS8" ManuallyRouted="false" />
         <AssociationConnector Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS1_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dbc940850377cd4fbf9932a82900d1c789Model.CurrentRegistrationNo" Width="1.5" PointX="6.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

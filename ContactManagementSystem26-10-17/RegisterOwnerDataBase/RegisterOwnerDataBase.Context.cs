@@ -44,5 +44,6 @@ namespace ContactManagementSystem26_10_17.RegisterOwnerDataBase
         public virtual DbSet<RegistrationNoS8> RegistrationNoS8 { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<CurrentRegistrationNo> CurrentRegistrationNoes { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Raouf\Documents\Visual Studio 2013\Projects\Register Owner\ContactManagementSystem26-10-17\RegisterOwnerDataBase\RegisterOwnerDataBase.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Raouf\Documents\GitHub\RegisterOwnerUpdated\ContactManagementSystem26-10-17\RegisterOwnerDataBase\RegisterOwnerDataBase.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
