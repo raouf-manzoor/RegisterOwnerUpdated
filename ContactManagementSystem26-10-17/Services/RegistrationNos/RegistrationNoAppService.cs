@@ -84,6 +84,46 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
 
                 }
+
+
+
+                else if (input.Digits == 3)
+                {
+                    int threeDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.ThreeDigit) + 1;
+
+                    oneDigitString = Base36Converter.ConvertToBaseK(threeDigit, 3);
+                    var regNos1Check = dbcontext.RegistrationNoS3.FirstOrDefault(e => e.RegNo == oneDigitString);
+
+                    while (regNos1Check != null)
+                    {
+                        threeDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                        //oneDigit++;
+                        //oneDigitString = oneDigit.ToString();
+                        oneDigitString = Base36Converter.ConvertToBaseK(threeDigit, 3);
+                        regNos1Check = dbcontext.RegistrationNoS3.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        //currentRegistrationNo.OneDigit = oneDigitString;
+                    }
+                    var regNos3 = new RegistrationNoS3()
+                    {
+                        RegNo = oneDigitString,
+                        userId = input.UserId,
+                        PaidStatus = true,
+                        TimeStamp = DateTime.Now.TimeOfDay
+                    };
+                    //oneDigit++;
+                    //oneDigitString = oneDigit.ToString();
+                    currentRegistrationNo.ThreeDigit = oneDigitString;
+                    dbcontext.RegistrationNoS3.Add(regNos3);
+                    dbcontext.SaveChanges();
+
+
+
+                }
+
+
+
+
+
                 return new
                 {
                     IsGenerated = true,
