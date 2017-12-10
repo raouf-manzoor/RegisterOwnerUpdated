@@ -193,6 +193,42 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
 
 
+                else if (input.Digits == 6)
+                {
+                    int sixDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.SixDigit) + 1;
+
+                    oneDigitString = Base36Converter.ConvertToBaseK(sixDigit, 6);
+                    var regNos1Check = dbcontext.RegistrationNoS6.FirstOrDefault(e => e.RegNo == oneDigitString);
+
+                    while (regNos1Check != null)
+                    {
+                        sixDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                        //oneDigit++;
+                        //oneDigitString = oneDigit.ToString();
+                        oneDigitString = Base36Converter.ConvertToBaseK(sixDigit, 6);
+                        regNos1Check = dbcontext.RegistrationNoS6.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        //currentRegistrationNo.OneDigit = oneDigitString;
+                    }
+                    var regNos6 = new RegistrationNoS6()
+                    {
+                        RegNo = oneDigitString,
+                        userId = input.UserId,
+                        PaidStatus = true,
+                        TimeStamp = DateTime.Now.TimeOfDay
+                    };
+                    //oneDigit++;
+                    //oneDigitString = oneDigit.ToString();
+                    currentRegistrationNo.SixDigit = oneDigitString;
+                    dbcontext.RegistrationNoS6.Add(regNos6);
+                    dbcontext.SaveChanges();
+
+
+
+                }
+
+
+
+
                 return new
                 {
                     IsGenerated = true,
