@@ -7,10 +7,9 @@ namespace ContactManagementSystem26_10_17
 {
     public static class Base36Converter
     {
-        public static string ConvertToBaseK(int val)
+        public static string ConvertToBaseK(int val , int size)
         {
 
-            int size = val.ToString().Length;
             var baseDef = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             var result = string.Empty;
             int targetBase = baseDef.Length;

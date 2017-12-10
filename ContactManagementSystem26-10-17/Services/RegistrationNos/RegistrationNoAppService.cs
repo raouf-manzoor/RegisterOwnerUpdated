@@ -22,7 +22,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
                     int oneDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.OneDigit) + 1;
 
-                    oneDigitString = Base36Converter.ConvertToBaseK(oneDigit);
+                    oneDigitString = Base36Converter.ConvertToBaseK(oneDigit,1);
                     var regNos1Check = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
 
                     while (regNos1Check != null)
@@ -30,7 +30,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                         oneDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
                         //oneDigit++;
                         //oneDigitString = oneDigit.ToString();
-                        oneDigitString = Base36Converter.ConvertToBaseK(oneDigit);
+                        oneDigitString = Base36Converter.ConvertToBaseK(oneDigit,1);
                         regNos1Check = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
                         //currentRegistrationNo.OneDigit = oneDigitString;
                     }
