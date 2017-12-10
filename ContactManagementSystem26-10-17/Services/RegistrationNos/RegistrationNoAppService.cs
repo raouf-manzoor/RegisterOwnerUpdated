@@ -261,6 +261,41 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
 
 
+                else if (input.Digits == 8)
+                {
+                    int eightDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.EightDigit) + 1;
+
+                    oneDigitString = Base36Converter.ConvertToBaseK(eightDigit, 8);
+                    var regNos1Check = dbcontext.RegistrationNoS8.FirstOrDefault(e => e.RegNo == oneDigitString);
+
+                    while (regNos1Check != null)
+                    {
+                        eightDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                        //oneDigit++;
+                        //oneDigitString = oneDigit.ToString();
+                        oneDigitString = Base36Converter.ConvertToBaseK(eightDigit, 8);
+                        regNos1Check = dbcontext.RegistrationNoS8.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        //currentRegistrationNo.OneDigit = oneDigitString;
+                    }
+                    var regNos8 = new RegistrationNoS8()
+                    {
+                        RegNo = oneDigitString,
+                        userId = input.UserId,
+                        PaidStatus = true,
+                        TimeStamp = DateTime.Now.TimeOfDay
+                    };
+                    //oneDigit++;
+                    //oneDigitString = oneDigit.ToString();
+                    currentRegistrationNo.EightDigit = oneDigitString;
+                    dbcontext.RegistrationNoS8.Add(regNos8);
+                    dbcontext.SaveChanges();
+
+
+                }
+
+
+
+
 
                 return new
                 {
