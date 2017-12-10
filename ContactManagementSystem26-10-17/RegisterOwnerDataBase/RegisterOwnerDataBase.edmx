@@ -426,6 +426,90 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_RegistrationNoS2_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="RegistrationNoS2" Type="Self.RegistrationNoS2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS2">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS3_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="RegistrationNoS3" Type="Self.RegistrationNoS3" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS3">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS4_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="RegistrationNoS4" Type="Self.RegistrationNoS4" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS4">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS5_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="RegistrationNoS5" Type="Self.RegistrationNoS5" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS5">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS6_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="RegistrationNoS6" Type="Self.RegistrationNoS6" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS6">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS7_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="RegistrationNoS7" Type="Self.RegistrationNoS7" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS7">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS8_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="RegistrationNoS8" Type="Self.RegistrationNoS8" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS8">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="dbc940850377cd4fbf9932a82900d1c789ModelStoreContainer">
           <EntitySet Name="BridgeRegNoItemS2" EntityType="Self.BridgeRegNoItemS2" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BridgeRegNoItemsS1" EntityType="Self.BridgeRegNoItemsS1" Schema="dbo" store:Type="Tables" />
@@ -514,6 +598,34 @@
           <AssociationSet Name="FK_RegistrationNoS1_User" Association="Self.FK_RegistrationNoS1_User">
             <End Role="User" EntitySet="User" />
             <End Role="RegistrationNoS1" EntitySet="RegistrationNoS1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS2_User" Association="Self.FK_RegistrationNoS2_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="RegistrationNoS2" EntitySet="RegistrationNoS2" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS3_User" Association="Self.FK_RegistrationNoS3_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="RegistrationNoS3" EntitySet="RegistrationNoS3" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS4_User" Association="Self.FK_RegistrationNoS4_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="RegistrationNoS4" EntitySet="RegistrationNoS4" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS5_User" Association="Self.FK_RegistrationNoS5_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="RegistrationNoS5" EntitySet="RegistrationNoS5" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS6_User" Association="Self.FK_RegistrationNoS6_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="RegistrationNoS6" EntitySet="RegistrationNoS6" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS7_User" Association="Self.FK_RegistrationNoS7_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="RegistrationNoS7" EntitySet="RegistrationNoS7" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS8_User" Association="Self.FK_RegistrationNoS8_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="RegistrationNoS8" EntitySet="RegistrationNoS8" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -656,6 +768,7 @@
           <Property Name="PaidStatus" Type="Boolean" />
           <Property Name="TimeStamp" Type="Time" Precision="7" />
           <NavigationProperty Name="BridgeRegNoItemS2" Relationship="Self.FK_BridgeRegNoItemS2_RegistrationNoS2" FromRole="RegistrationNoS2" ToRole="BridgeRegNoItemS2" />
+          <NavigationProperty Name="User" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS2_User" FromRole="RegistrationNoS2" ToRole="User" />
         </EntityType>
         <EntityType Name="RegistrationNoS3">
           <Key>
@@ -668,6 +781,7 @@
           <Property Name="PaidStatus" Type="Boolean" />
           <Property Name="TimeStamp" Type="Time" Precision="7" />
           <NavigationProperty Name="BridgeRegNoItemsS3" Relationship="Self.FK_BridgeRegNoItemsS3_RegistrationNoS3" FromRole="RegistrationNoS3" ToRole="BridgeRegNoItemsS3" />
+          <NavigationProperty Name="User" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS3_User" FromRole="RegistrationNoS3" ToRole="User" />
         </EntityType>
         <EntityType Name="RegistrationNoS4">
           <Key>
@@ -680,6 +794,7 @@
           <Property Name="PaidStatus" Type="Boolean" />
           <Property Name="TimeStamp" Type="Time" Precision="7" />
           <NavigationProperty Name="BridgeRegNoItemsS4" Relationship="Self.FK_BridgeRegNoItemsS4_RegistrationNoS4" FromRole="RegistrationNoS4" ToRole="BridgeRegNoItemsS4" />
+          <NavigationProperty Name="User" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS4_User" FromRole="RegistrationNoS4" ToRole="User" />
         </EntityType>
         <EntityType Name="RegistrationNoS5">
           <Key>
@@ -692,6 +807,7 @@
           <Property Name="PaidStatus" Type="Boolean" />
           <Property Name="TimeStamp" Type="Time" Precision="7" />
           <NavigationProperty Name="BridgeRegNoItemsS5" Relationship="Self.FK_BridgeRegNoItemsS5_RegistrationNoS5" FromRole="RegistrationNoS5" ToRole="BridgeRegNoItemsS5" />
+          <NavigationProperty Name="User" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS5_User" FromRole="RegistrationNoS5" ToRole="User" />
         </EntityType>
         <EntityType Name="RegistrationNoS6">
           <Key>
@@ -704,6 +820,7 @@
           <Property Name="PaidStatus" Type="Boolean" />
           <Property Name="TimeStamp" Type="Time" Precision="7" />
           <NavigationProperty Name="BridgeRegNoItemsS6" Relationship="Self.FK_BridgeRegNoItemsS6_RegistrationNoS6" FromRole="RegistrationNoS6" ToRole="BridgeRegNoItemsS6" />
+          <NavigationProperty Name="User" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS6_User" FromRole="RegistrationNoS6" ToRole="User" />
         </EntityType>
         <EntityType Name="RegistrationNoS7">
           <Key>
@@ -716,6 +833,7 @@
           <Property Name="PaidStatus" Type="Boolean" />
           <Property Name="TimeStamp" Type="Time" Precision="7" />
           <NavigationProperty Name="BridgeRegNoItemsS7" Relationship="Self.FK_BridgeRegNoItemsS7_RegistrationNoS7" FromRole="RegistrationNoS7" ToRole="BridgeRegNoItemsS7" />
+          <NavigationProperty Name="User" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS7_User" FromRole="RegistrationNoS7" ToRole="User" />
         </EntityType>
         <EntityType Name="RegistrationNoS8">
           <Key>
@@ -728,6 +846,7 @@
           <Property Name="PaidStatus" Type="Boolean" />
           <Property Name="TimeStamp" Type="Time" Precision="7" />
           <NavigationProperty Name="BridgeRegNosItemS8" Relationship="Self.FK_BridgeRegNosItemS8_RegistrationNoS8" FromRole="RegistrationNoS8" ToRole="BridgeRegNosItemS8" />
+          <NavigationProperty Name="User" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS8_User" FromRole="RegistrationNoS8" ToRole="User" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -756,6 +875,13 @@
           <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="RegistrationNoS1" Relationship="Self.FK_RegistrationNoS1_User" FromRole="User" ToRole="RegistrationNoS1" />
+          <NavigationProperty Name="RegistrationNoS3" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS3_User" FromRole="User" ToRole="RegistrationNoS3" />
+          <NavigationProperty Name="RegistrationNoS4" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS4_User" FromRole="User" ToRole="RegistrationNoS4" />
+          <NavigationProperty Name="RegistrationNoS5" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS5_User" FromRole="User" ToRole="RegistrationNoS5" />
+          <NavigationProperty Name="RegistrationNoS6" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS6_User" FromRole="User" ToRole="RegistrationNoS6" />
+          <NavigationProperty Name="RegistrationNoS7" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS7_User" FromRole="User" ToRole="RegistrationNoS7" />
+          <NavigationProperty Name="RegistrationNoS8" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS8_User" FromRole="User" ToRole="RegistrationNoS8" />
+          <NavigationProperty Name="RegistrationNoS2" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS2_User" FromRole="User" ToRole="RegistrationNoS2" />
         </EntityType>
         <Association Name="FK_BridgeRegNoItemS2_Items">
           <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
@@ -1050,6 +1176,34 @@
             <End Role="RegistrationNoS1" EntitySet="RegistrationNoS1" />
           </AssociationSet>
           <EntitySet Name="CurrentRegistrationNoes" EntityType="dbc940850377cd4fbf9932a82900d1c789Model.CurrentRegistrationNo" />
+          <AssociationSet Name="FK_RegistrationNoS3_User" Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS3_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="RegistrationNoS3" EntitySet="RegistrationNoS3" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS4_User" Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS4_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="RegistrationNoS4" EntitySet="RegistrationNoS4" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS5_User" Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS5_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="RegistrationNoS5" EntitySet="RegistrationNoS5" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS6_User" Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS6_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="RegistrationNoS6" EntitySet="RegistrationNoS6" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS7_User" Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS7_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="RegistrationNoS7" EntitySet="RegistrationNoS7" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS8_User" Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS8_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="RegistrationNoS8" EntitySet="RegistrationNoS8" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RegistrationNoS2_User" Association="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS2_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="RegistrationNoS2" EntitySet="RegistrationNoS2" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="CurrentRegistrationNo">
           <Key>
@@ -1065,6 +1219,90 @@
           <Property Name="SevenDigit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EightDigit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <Association Name="FK_RegistrationNoS3_User">
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.User" Role="User" Multiplicity="0..1" />
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS3" Role="RegistrationNoS3" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS3">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS4_User">
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.User" Role="User" Multiplicity="0..1" />
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS4" Role="RegistrationNoS4" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS4">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS5_User">
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.User" Role="User" Multiplicity="0..1" />
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS5" Role="RegistrationNoS5" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS5">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS6_User">
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.User" Role="User" Multiplicity="0..1" />
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS6" Role="RegistrationNoS6" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS6">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS7_User">
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.User" Role="User" Multiplicity="0..1" />
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS7" Role="RegistrationNoS7" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS7">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS8_User">
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.User" Role="User" Multiplicity="0..1" />
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS8" Role="RegistrationNoS8" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS8">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RegistrationNoS2_User">
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.User" Role="User" Multiplicity="0..1" />
+          <End Type="dbc940850377cd4fbf9932a82900d1c789Model.RegistrationNoS2" Role="RegistrationNoS2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RegistrationNoS2">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

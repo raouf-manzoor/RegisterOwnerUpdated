@@ -27,5 +27,6 @@ namespace ContactManagementSystem26_10_17.RegisterOwnerDataBase
         public Nullable<System.TimeSpan> TimeStamp { get; set; }
     
         public virtual ICollection<BridgeRegNoItemsS5> BridgeRegNoItemsS5 { get; set; }
+        public virtual User User { get; set; }
     }
 }
