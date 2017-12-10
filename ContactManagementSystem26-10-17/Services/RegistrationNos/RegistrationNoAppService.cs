@@ -16,13 +16,16 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                 RegisterOwnersContext dbcontext = new RegisterOwnersContext();
                 var currentRegistrationNo = dbcontext.CurrentRegistrationNoes.First();
                 string oneDigitString = null;
+                
+
+
                 if (input.Digits == 1)
                 {
                     //var regNos1 = new RegistrationNoS1();
 
                     int oneDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.OneDigit) + 1;
 
-                    oneDigitString = Base36Converter.ConvertToBaseK(oneDigit,1);
+                    oneDigitString = Base36Converter.ConvertToBaseK(oneDigit, 1);
                     var regNos1Check = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
 
                     while (regNos1Check != null)
@@ -30,7 +33,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                         oneDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
                         //oneDigit++;
                         //oneDigitString = oneDigit.ToString();
-                        oneDigitString = Base36Converter.ConvertToBaseK(oneDigit,1);
+                        oneDigitString = Base36Converter.ConvertToBaseK(oneDigit, 1);
                         regNos1Check = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
                         //currentRegistrationNo.OneDigit = oneDigitString;
                     }
@@ -46,6 +49,40 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     currentRegistrationNo.OneDigit = oneDigitString;
                     dbcontext.RegistrationNoS1.Add(regNos1);
                     dbcontext.SaveChanges();
+                }
+
+
+                else if (input.Digits == 2)
+                {
+                    int twoDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.TwoDigit) + 1;
+
+                    oneDigitString = Base36Converter.ConvertToBaseK(twoDigit, 2);
+                    var regNos1Check = dbcontext.RegistrationNoS2.FirstOrDefault(e => e.RegNo == oneDigitString);
+
+                    while (regNos1Check != null)
+                    {
+                        twoDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                        //oneDigit++;
+                        //oneDigitString = oneDigit.ToString();
+                        oneDigitString = Base36Converter.ConvertToBaseK(twoDigit, 2);
+                        regNos1Check = dbcontext.RegistrationNoS2.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        //currentRegistrationNo.OneDigit = oneDigitString;
+                    }
+                    var regNos2 = new RegistrationNoS2()
+                    {
+                        RegNo = oneDigitString,
+                        userId = input.UserId,
+                        PaidStatus = true,
+                        TimeStamp = DateTime.Now.TimeOfDay
+                    };
+                    //oneDigit++;
+                    //oneDigitString = oneDigit.ToString();
+                    currentRegistrationNo.TwoDigit = oneDigitString;
+                    dbcontext.RegistrationNoS2.Add(regNos2);
+                    dbcontext.SaveChanges();
+
+
+
                 }
                 return new
                 {
