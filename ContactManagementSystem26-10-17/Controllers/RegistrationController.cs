@@ -70,7 +70,7 @@ namespace ContactManagementSystem26_10_17.Controllers
             };
            // return Mapper.Map<User, UserDto>(userEntity);
         }
-
+        [HttpPost]
         public dynamic GetAutoRegistrationNo(GetRegistrationNoInput input)
         {
             return new RegistrationNoAppService().GetAutoRegistrationNo(input);
