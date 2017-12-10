@@ -55,7 +55,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
             {
                 return new
                 {
-                    IsGenerated = true,
+                    IsGenerated = false,
                     ErrorException = ex,
                 };
             }
