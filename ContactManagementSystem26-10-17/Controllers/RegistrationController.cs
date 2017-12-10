@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using ContactManagementSystem26_10_17.RegisterOwnerDataBase;
+using ContactManagementSystem26_10_17.Services.RegistrationNos;
+using ContactManagementSystem26_10_17.Services.RegistrationNos.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,6 +69,11 @@ namespace ContactManagementSystem26_10_17.Controllers
                 LogInResponse= Mapper.Map<User, UserDto>(userEntity)
             };
            // return Mapper.Map<User, UserDto>(userEntity);
+        }
+
+        public dynamic GetAutoRegistrationNo(GetRegistrationNoInput input)
+        {
+            return new RegistrationNoAppService().GetAutoRegistrationNo(input);
         }
     }
 
