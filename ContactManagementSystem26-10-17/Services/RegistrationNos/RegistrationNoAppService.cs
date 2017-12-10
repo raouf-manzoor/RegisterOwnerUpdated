@@ -257,7 +257,6 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     dbcontext.SaveChanges();
 
 
-
                 }
 
 
