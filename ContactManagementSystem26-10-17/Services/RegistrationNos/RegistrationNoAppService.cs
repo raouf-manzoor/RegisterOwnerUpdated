@@ -313,5 +313,76 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
             }
 
         }
+        public List<GetOwnedRegistrationNumbersOutput> GetOwnedRegistrationNumbers(GetOwnedRegistrationNumbersInput input)
+        {
+            var dbcontext = new RegisterOwnersContext();
+            var user = dbcontext.Users.Single(e => e.Id == input.UserId);
+            var regNoS1List = user.RegistrationNoS1.
+                   Select(e => new GetOwnedRegistrationNumbersOutput()
+                   {
+                       UserId = input.UserId,
+                       ItemId = e.ItemId,
+                       RegNo = e.RegNo
+                   });
+            var regNoS2List = user.RegistrationNoS2.
+                   Select(e => new GetOwnedRegistrationNumbersOutput()
+                   {
+                       UserId = input.UserId,
+                       ItemId = e.ItemId,
+                       RegNo = e.RegNo
+                   });
+            var regNoS3List = user.RegistrationNoS3.
+                   Select(e => new GetOwnedRegistrationNumbersOutput()
+                   {
+                       UserId = input.UserId,
+                       ItemId = e.ItemId,
+                       RegNo = e.RegNo
+                   });
+            var regNoS4List = user.RegistrationNoS4.
+              Select(e => new GetOwnedRegistrationNumbersOutput()
+              {
+                  UserId = input.UserId,
+                  ItemId = e.ItemId,
+                  RegNo = e.RegNo
+              });
+            var regNoS5List = user.RegistrationNoS5.
+              Select(e => new GetOwnedRegistrationNumbersOutput()
+              {
+                  UserId = input.UserId,
+                  ItemId = e.ItemId,
+                  RegNo = e.RegNo
+              });
+            var regNoS6List = user.RegistrationNoS6.
+              Select(e => new GetOwnedRegistrationNumbersOutput()
+              {
+                  UserId = input.UserId,
+                  ItemId = e.ItemId,
+                  RegNo = e.RegNo
+              });
+            var regNoS7List = user.RegistrationNoS7.
+              Select(e => new GetOwnedRegistrationNumbersOutput()
+              {
+                  UserId = input.UserId,
+                  ItemId = e.ItemId,
+                  RegNo = e.RegNo
+              });
+            var regNoS8List = user.RegistrationNoS8.
+              Select(e => new GetOwnedRegistrationNumbersOutput()
+              {
+                  UserId = input.UserId,
+                  ItemId = e.ItemId,
+                  RegNo = e.RegNo
+              });
+            var totalRegNoList = new List<GetOwnedRegistrationNumbersOutput>();
+            totalRegNoList.AddRange(regNoS1List);
+            totalRegNoList.AddRange(regNoS2List);
+            totalRegNoList.AddRange(regNoS3List);
+            totalRegNoList.AddRange(regNoS4List);
+            totalRegNoList.AddRange(regNoS5List);
+            totalRegNoList.AddRange(regNoS6List);
+            totalRegNoList.AddRange(regNoS7List);
+            totalRegNoList.AddRange(regNoS8List);
+            return totalRegNoList;
+        }
     }
 }
