@@ -23,7 +23,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                 {
                     //var regNos1 = new RegistrationNoS1();
 
-                    int oneDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.OneDigit) + 1;
+                    var oneDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.OneDigit) + 1;
 
                     oneDigitString = Base36Converter.ConvertToBaseK(oneDigit, 1);
                     var regNos1Check = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
@@ -54,7 +54,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
                 else if (input.Digits == 2)
                 {
-                    int twoDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.TwoDigit) + 1;
+                    var twoDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.TwoDigit) + 1;
 
                     oneDigitString = Base36Converter.ConvertToBaseK(twoDigit, 2);
                     var regNos1Check = dbcontext.RegistrationNoS2.FirstOrDefault(e => e.RegNo == oneDigitString);
@@ -89,7 +89,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
                 else if (input.Digits == 3)
                 {
-                    int threeDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.ThreeDigit) + 1;
+                    var threeDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.ThreeDigit) + 1;
 
                     oneDigitString = Base36Converter.ConvertToBaseK(threeDigit, 3);
                     var regNos1Check = dbcontext.RegistrationNoS3.FirstOrDefault(e => e.RegNo == oneDigitString);
@@ -124,7 +124,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
                 else if (input.Digits == 4)
                 {
-                    int fourDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.FourDigit) + 1;
+                    var fourDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.FourDigit) + 1;
 
                     oneDigitString = Base36Converter.ConvertToBaseK(fourDigit, 4);
                     var regNos1Check = dbcontext.RegistrationNoS4.FirstOrDefault(e => e.RegNo == oneDigitString);
@@ -159,7 +159,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
                 else if (input.Digits == 5)
                 {
-                    int fiveDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.FiveDigit) + 1;
+                    var fiveDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.FiveDigit) + 1;
 
                     oneDigitString = Base36Converter.ConvertToBaseK(fiveDigit, 5);
                     var regNos1Check = dbcontext.RegistrationNoS5.FirstOrDefault(e => e.RegNo == oneDigitString);
@@ -195,7 +195,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
                 else if (input.Digits == 6)
                 {
-                    int sixDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.SixDigit) + 1;
+                    var sixDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.SixDigit) + 1;
 
                     oneDigitString = Base36Converter.ConvertToBaseK(sixDigit, 6);
                     var regNos1Check = dbcontext.RegistrationNoS6.FirstOrDefault(e => e.RegNo == oneDigitString);
@@ -229,7 +229,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
                 else if (input.Digits == 7)
                 {
-                    int sevenDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.SevenDigit) + 1;
+                    var sevenDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.SevenDigit) + 1;
 
                     oneDigitString = Base36Converter.ConvertToBaseK(sevenDigit, 7);
                     var regNos1Check = dbcontext.RegistrationNoS7.FirstOrDefault(e => e.RegNo == oneDigitString);
@@ -263,7 +263,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 
                 else if (input.Digits == 8)
                 {
-                    int eightDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.EightDigit) + 1;
+                    var eightDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.EightDigit) + 1;
 
                     oneDigitString = Base36Converter.ConvertToBaseK(eightDigit, 8);
                     var regNos1Check = dbcontext.RegistrationNoS8.FirstOrDefault(e => e.RegNo == oneDigitString);
