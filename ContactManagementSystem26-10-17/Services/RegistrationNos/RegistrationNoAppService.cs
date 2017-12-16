@@ -16,7 +16,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                 RegisterOwnersContext dbcontext = new RegisterOwnersContext();
                 var currentRegistrationNo = dbcontext.CurrentRegistrationNoes.First();
                 string oneDigitString = null;
-                
+
 
 
                 if (input.Digits == 1)
@@ -310,15 +310,18 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                    Select(e => new GetOwnedRegistrationNumbersOutput()
                    {
                        UserId = input.UserId,
-                       ItemId = e.ItemId,
-                       RegNo = e.RegNo
+                       ItemId = e.BridgeRegNoItemsS1.Count > 0 ? (e.BridgeRegNoItemsS1.FirstOrDefault(b =>b.RegId == e.Id)!=null ? e.BridgeRegNoItemsS1.FirstOrDefault(b => b.RegId == e.Id).ItemId:null) : null,
+                       RegNo = e.RegNo,
+                       RegNoId = e.Id
                    });
             var regNoS2List = user.RegistrationNoS2.
                    Select(e => new GetOwnedRegistrationNumbersOutput()
                    {
                        UserId = input.UserId,
-                       ItemId = e.ItemId,
-                       RegNo = e.RegNo
+                      // ItemId = e.BridgeRegNoItemS2 != null ? e.BridgeRegNoItemS2.First().ItemId : null,
+                       //ItemId = e.ItemId,
+                       RegNo = e.RegNo,
+                       RegNoId = e.Id
                    });
             var regNoS3List = user.RegistrationNoS3.
                    Select(e => new GetOwnedRegistrationNumbersOutput()

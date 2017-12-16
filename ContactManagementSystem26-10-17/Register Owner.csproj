@@ -177,6 +177,7 @@
     <Compile Include="BasicAuthenticationClass.cs" />
     <Compile Include="ContactSecurity.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -262,6 +263,8 @@
       <DependentUpon>RegisterOwnerDataBase.tt</DependentUpon>
     </Compile>
     <Compile Include="Services\Accounts\AccountAppService.cs" />
+    <Compile Include="Services\Items\Dtos\ItemDto.cs" />
+    <Compile Include="Services\Items\ItemAppService.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetOwnedRegistrationNumbersInput.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetOwnedRegistrationNumbersOutput.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetRegistrationNoInput.cs" />

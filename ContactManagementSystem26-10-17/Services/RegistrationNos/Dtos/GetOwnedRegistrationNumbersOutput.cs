@@ -11,6 +11,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos.Dtos
 
         public string RegNo { get; set; }
 
+        public int? RegNoId { get; set; }
         public int UserId { get; set; }
     }
 }
