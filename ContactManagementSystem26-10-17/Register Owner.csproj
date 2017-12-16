@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Services\Accounts\Dtos\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -260,6 +261,7 @@
     <Compile Include="RegisterOwnerDataBase\User.cs">
       <DependentUpon>RegisterOwnerDataBase.tt</DependentUpon>
     </Compile>
+    <Compile Include="Services\Accounts\AccountAppService.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetOwnedRegistrationNumbersInput.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetOwnedRegistrationNumbersOutput.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetRegistrationNoInput.cs" />

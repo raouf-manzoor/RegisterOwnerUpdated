@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ContactManagementSystem26_10_17.RegisterOwnerDataBase;
+using ContactManagementSystem26_10_17.Services.Accounts;
 using ContactManagementSystem26_10_17.Services.RegistrationNos;
 using ContactManagementSystem26_10_17.Services.RegistrationNos.Dtos;
 using System;
@@ -80,6 +81,15 @@ namespace ContactManagementSystem26_10_17.Controllers
         {
             return new RegistrationNoAppService().GetOwnedRegistrationNumbers(input);
         }
+
+        [HttpPost]
+        public dynamic UpdateUser(UserDto input)
+        {
+            return new AccountAppService().UpdateUser(input);
+        }
+
+
+
     }
 
     public class RegistrationUserData
