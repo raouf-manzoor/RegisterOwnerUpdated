@@ -80,13 +80,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     currentRegistrationNo.TwoDigit = oneDigitString;
                     dbcontext.RegistrationNoS2.Add(regNos2);
                     dbcontext.SaveChanges();
-
-
-
                 }
-
-
-
                 else if (input.Digits == 3)
                 {
                     var threeDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.ThreeDigit) + 1;
@@ -115,12 +109,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     currentRegistrationNo.ThreeDigit = oneDigitString;
                     dbcontext.RegistrationNoS3.Add(regNos3);
                     dbcontext.SaveChanges();
-
-
-
                 }
-
-
 
                 else if (input.Digits == 4)
                 {
