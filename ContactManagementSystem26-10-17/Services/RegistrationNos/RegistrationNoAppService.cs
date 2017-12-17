@@ -3,7 +3,6 @@ using ContactManagementSystem26_10_17.Services.RegistrationNos.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace ContactManagementSystem26_10_17.Services.RegistrationNos
 {
@@ -318,8 +317,9 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                    Select(e => new GetOwnedRegistrationNumbersOutput()
                    {
                        UserId = input.UserId,
-                      // ItemId = e.BridgeRegNoItemS2 != null ? e.BridgeRegNoItemS2.First().ItemId : null,
+                       // ItemId = e.BridgeRegNoItemS2 != null ? e.BridgeRegNoItemS2.First().ItemId : null,
                        //ItemId = e.ItemId,
+                       ItemId = e.BridgeRegNoItemS2.Count > 0 ? (e.BridgeRegNoItemS2.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemS2.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
                        RegNo = e.RegNo,
                        RegNoId = e.Id
                    });
@@ -327,43 +327,57 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                    Select(e => new GetOwnedRegistrationNumbersOutput()
                    {
                        UserId = input.UserId,
-                       ItemId = e.ItemId,
-                       RegNo = e.RegNo
+                       //ItemId = e.ItemId,
+                       RegNo = e.RegNo,
+                       ItemId = e.BridgeRegNoItemsS3.Count > 0 ? (e.BridgeRegNoItemsS3.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS3.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
+                       RegNoId = e.Id
                    });
             var regNoS4List = user.RegistrationNoS4.
               Select(e => new GetOwnedRegistrationNumbersOutput()
               {
                   UserId = input.UserId,
-                  ItemId = e.ItemId,
-                  RegNo = e.RegNo
+                  //ItemId = e.ItemId,
+                  RegNo = e.RegNo,
+                  ItemId = e.BridgeRegNoItemsS4.Count > 0 ? (e.BridgeRegNoItemsS4.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS4.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
+                  RegNoId = e.Id
+
               });
             var regNoS5List = user.RegistrationNoS5.
               Select(e => new GetOwnedRegistrationNumbersOutput()
               {
                   UserId = input.UserId,
-                  ItemId = e.ItemId,
-                  RegNo = e.RegNo
+                  //ItemId = e.ItemId,
+                  RegNo = e.RegNo,
+                  ItemId = e.BridgeRegNoItemsS5.Count > 0 ? (e.BridgeRegNoItemsS5.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS5.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
+                  RegNoId = e.Id
+
               });
             var regNoS6List = user.RegistrationNoS6.
               Select(e => new GetOwnedRegistrationNumbersOutput()
               {
                   UserId = input.UserId,
-                  ItemId = e.ItemId,
-                  RegNo = e.RegNo
+                  //ItemId = e.ItemId,
+                  RegNo = e.RegNo,
+                  ItemId = e.BridgeRegNoItemsS6.Count > 0 ? (e.BridgeRegNoItemsS6.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS6.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
+                  RegNoId = e.Id
               });
             var regNoS7List = user.RegistrationNoS7.
               Select(e => new GetOwnedRegistrationNumbersOutput()
               {
                   UserId = input.UserId,
-                  ItemId = e.ItemId,
-                  RegNo = e.RegNo
+                  //ItemId = e.ItemId,
+                  RegNo = e.RegNo,
+                  ItemId = e.BridgeRegNoItemsS7.Count > 0 ? (e.BridgeRegNoItemsS7.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS7.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
+                  RegNoId = e.Id
               });
             var regNoS8List = user.RegistrationNoS8.
               Select(e => new GetOwnedRegistrationNumbersOutput()
               {
                   UserId = input.UserId,
-                  ItemId = e.ItemId,
-                  RegNo = e.RegNo
+                  //ItemId = e.ItemId,
+                  RegNo = e.RegNo,
+                  ItemId = e.BridgeRegNosItemS8.Count > 0 ? (e.BridgeRegNosItemS8.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNosItemS8.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
+                  RegNoId = e.Id
               });
             var totalRegNoList = new List<GetOwnedRegistrationNumbersOutput>();
             totalRegNoList.AddRange(regNoS1List);
