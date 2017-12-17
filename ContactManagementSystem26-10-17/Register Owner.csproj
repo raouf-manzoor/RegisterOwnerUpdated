@@ -263,6 +263,7 @@
       <DependentUpon>RegisterOwnerDataBase.tt</DependentUpon>
     </Compile>
     <Compile Include="Services\Accounts\AccountAppService.cs" />
+    <Compile Include="Services\Items\Dtos\GetItemDetailsUsingRegistrationNoInput.cs" />
     <Compile Include="Services\Items\Dtos\ItemDto.cs" />
     <Compile Include="Services\Items\ItemAppService.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetOwnedRegistrationNumbersInput.cs" />

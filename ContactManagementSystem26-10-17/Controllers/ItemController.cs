@@ -14,6 +14,11 @@ namespace ContactManagementSystem26_10_17.Controllers
         {
             return new ItemAppService().RegisterItem(input);
         }
+        [HttpPost]
+        public dynamic GetItemDetailsUsingRegistrationNo(GetItemDetailsUsingRegistrationNoInput input)
+        {
+            return new ItemAppService().GetItemDetailsUsingRegistrationNo(input);
+        }
 
     }
 
