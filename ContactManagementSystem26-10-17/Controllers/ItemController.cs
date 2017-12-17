@@ -19,6 +19,11 @@ namespace ContactManagementSystem26_10_17.Controllers
         {
             return new ItemAppService().GetItemDetailsUsingRegistrationNo(input);
         }
+        [HttpPost]
+        public dynamic GetItemDetailsUsingSerialNo(GetItemDetailsUsingSerialNoInput input)
+        {
+            return new ItemAppService().GetItemDetailsUsingSerialNo(input);
+        }
 
     }
 
