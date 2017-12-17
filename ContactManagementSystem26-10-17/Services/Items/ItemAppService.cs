@@ -113,7 +113,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
         {
             RegisterOwnersContext dbcontext = new RegisterOwnersContext();
 
-            Item item = new Item();
+            Item item = null;
             //var currentRegistrationNo = dbcontext.CurrentRegistrationNoes.First();
             if (input.RegNo.Length == 1)
             {
