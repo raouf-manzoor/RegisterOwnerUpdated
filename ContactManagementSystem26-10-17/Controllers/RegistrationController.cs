@@ -36,8 +36,8 @@ namespace ContactManagementSystem26_10_17.Controllers
                 dbcontext.Users.Add(data);
                 dbcontext.SaveChanges();
 
-                string url = " <a href=http://registerownertest.apphb.com/api/registration/VerifyEmail?Id=" + data.Id + ">" + "Verify Email"+"</a>";
-                     SendEmail(data.Email, url);
+                string url = " <a href=http://registerownertest.apphb.com/Home/EmailVerification?Id=" + data.Id + ">" + "Verify Email" + "</a>";
+                SendEmail(data.Email, url);
 
                 return new RegistrationUserData
                 {
@@ -121,12 +121,20 @@ namespace ContactManagementSystem26_10_17.Controllers
         }
 
         [HttpGet]
-        public void VerifyEmail(int id)
+        public bool VerifyEmail(int id)
         {
-            var dbcontext = new RegisterOwnersContext();
-            var user = dbcontext.Users.Single(e => e.IsEmailVerified == null && e.Id == id);
-            user.IsEmailVerified = true;
-            dbcontext.SaveChanges();
+            try
+            {
+                var dbcontext = new RegisterOwnersContext();
+                var user = dbcontext.Users.Single(e => e.IsEmailVerified == null && e.Id == id);
+                user.IsEmailVerified = true;
+                dbcontext.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
 
         }
 

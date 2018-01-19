@@ -14,5 +14,15 @@ namespace ContactManagementSystem26_10_17.Controllers
 
             return View();
         }
+        [HttpGet]
+        public ActionResult EmailVerification(int id)
+        {
+            RegistrationController regController = new RegistrationController();
+            if (regController.VerifyEmail(id))
+                return View("VerifiedSuccess");
+            else
+                return View("VerifiedError");
+
+        }
     }
 }
