@@ -122,8 +122,7 @@ namespace ContactManagementSystem26_10_17.Controllers
         public void VerifyEmail(int id)
         {
             var dbcontext = new RegisterOwnersContext();
-            var user = dbcontext.Users.Single(e => e.IsEmailVerified == null ||
-              e.IsEmailVerified == false && (e.Id == id));
+            var user = dbcontext.Users.Single(e => e.IsEmailVerified == null && e.Id == id);
             user.IsEmailVerified = true;
             dbcontext.SaveChanges();
 
