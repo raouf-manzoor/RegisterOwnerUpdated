@@ -309,7 +309,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                    Select(e => new GetOwnedRegistrationNumbersOutput()
                    {
                        UserId = input.UserId,
-                       ItemId = e.BridgeRegNoItemsS1.Count > 0 ? (e.BridgeRegNoItemsS1.FirstOrDefault(b =>b.RegId == e.Id)!=null ? e.BridgeRegNoItemsS1.FirstOrDefault(b => b.RegId == e.Id).ItemId:null) : null,
+                       ItemId = e.BridgeRegNoItemsS1.Count > 0 ? (e.BridgeRegNoItemsS1.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS1.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
                        RegNo = e.RegNo,
                        RegNoId = e.Id
                    });
@@ -390,9 +390,95 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
             totalRegNoList.AddRange(regNoS8List);
             return new
             {
-                RegNosList= totalRegNoList
+                RegNosList = totalRegNoList
             };
-           // return totalRegNoList;
+            // return totalRegNoList;
+        }
+
+        public dynamic TransferRegistrationNumberToNewUser(TransferRegistrationNumberToNewUserInput input)
+        {
+            try
+            {
+                var dbcontext = new RegisterOwnersContext();
+                var user = dbcontext.Users.SingleOrDefault(e => e.Email == input.NewUserEmail);
+                if (user == null)
+                {
+                    return new
+                    {
+                        IsTransfered = false,
+                        Message = "User Does Not Exist",
+                        ErrorException = ""
+
+                    };
+                }
+                else
+                {
+                    var regNoSize = input.RegNo.Length;
+                    if (regNoSize == 1)
+                    {
+                        var regNo = dbcontext.RegistrationNoS1.Single(e => e.Id == input.RegNoId);
+                        regNo.userId = user.Id;
+                        dbcontext.SaveChanges();
+                    }
+                    else if (regNoSize == 2)
+                    {
+                        var regNo = dbcontext.RegistrationNoS2.Single(e => e.Id == input.RegNoId);
+                        regNo.userId = user.Id;
+                        dbcontext.SaveChanges();
+                    }
+                    else if (regNoSize == 3)
+                    {
+                        var regNo = dbcontext.RegistrationNoS3.Single(e => e.Id == input.RegNoId);
+                        regNo.userId = user.Id;
+                        dbcontext.SaveChanges();
+                    }
+                    else if (regNoSize == 4)
+                    {
+                        var regNo = dbcontext.RegistrationNoS4.Single(e => e.Id == input.RegNoId);
+                        regNo.userId = user.Id;
+                        dbcontext.SaveChanges();
+                    }
+                    else if (regNoSize == 5)
+                    {
+                        var regNo = dbcontext.RegistrationNoS5.Single(e => e.Id == input.RegNoId);
+                        regNo.userId = user.Id;
+                        dbcontext.SaveChanges();
+                    }
+                    else if (regNoSize == 6)
+                    {
+                        var regNo = dbcontext.RegistrationNoS6.Single(e => e.Id == input.RegNoId);
+                        regNo.userId = user.Id;
+                        dbcontext.SaveChanges();
+                    }
+                    else if (regNoSize == 7)
+                    {
+                        var regNo = dbcontext.RegistrationNoS7.Single(e => e.Id == input.RegNoId);
+                        regNo.userId = user.Id;
+                        dbcontext.SaveChanges();
+                    }
+                    else if (regNoSize == 8)
+                    {
+                        var regNo = dbcontext.RegistrationNoS8.Single(e => e.Id == input.RegNoId);
+                        regNo.userId = user.Id;
+                        dbcontext.SaveChanges();
+                    }
+                }
+                return new
+                {
+                    IsTransfered = true,
+                    Message = "Registration Number SuccessFully Transfered",
+                };
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+                    IsTransfered = false,
+                    Message = "",
+                    ErrorException = ex
+
+                };
+            }
         }
     }
 }

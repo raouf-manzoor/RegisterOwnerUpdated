@@ -93,6 +93,13 @@ namespace ContactManagementSystem26_10_17.Controllers
             return new AccountAppService().UpdateUser(input);
         }
 
+        [HttpPost]
+        public dynamic TransferRegistrationNumberToNewUser(TransferRegistrationNumberToNewUserInput input)
+        {
+            return new RegistrationNoAppService().TransferRegistrationNumberToNewUser(input);
+        }
+
+
         // Sending Email Code
 
         public void SendEmail(string email, string body)
