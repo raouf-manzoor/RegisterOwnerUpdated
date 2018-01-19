@@ -38,6 +38,7 @@ namespace ContactManagementSystem26_10_17.RegisterOwnerDataBase
         public string Place { get; set; }
         public string Country { get; set; }
         public string MobileNo { get; set; }
+        public Nullable<bool> IsEmailVerified { get; set; }
     
         public virtual ICollection<RegistrationNoS1> RegistrationNoS1 { get; set; }
         public virtual ICollection<RegistrationNoS3> RegistrationNoS3 { get; set; }

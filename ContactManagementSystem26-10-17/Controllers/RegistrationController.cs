@@ -35,7 +35,7 @@ namespace ContactManagementSystem26_10_17.Controllers
                 var dbcontext = new RegisterOwnersContext();
                 dbcontext.Users.Add(data);
                 dbcontext.SaveChanges();
-                SendEmail(data.Email, "Activate Email Link");
+                SendEmail(data.Email, "Activate Account : <a href='http://registerownertest.apphb.com/api/registration/VerifyEmail?Id='>" + data.Id + "</a>");
 
                 return new RegistrationUserData
                 {
@@ -118,6 +118,15 @@ namespace ContactManagementSystem26_10_17.Controllers
 
         }
 
+        public void VerifyEmail(int id)
+        {
+            var dbcontext = new RegisterOwnersContext();
+            var user = dbcontext.Users.Single(e => e.IsEmailVerified == null ||
+              e.IsEmailVerified == false && (e.Id == id));
+            user.IsEmailVerified = true;
+            dbcontext.SaveChanges();
+
+        }
 
     }
 

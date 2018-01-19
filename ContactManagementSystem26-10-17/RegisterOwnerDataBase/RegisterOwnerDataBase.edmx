@@ -221,6 +221,7 @@
           <Property Name="Place" Type="varchar" MaxLength="50" />
           <Property Name="Country" Type="varchar" MaxLength="50" />
           <Property Name="MobileNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsEmailVerified" Type="bit" />
         </EntityType>
         <Association Name="FK_BridgeRegNoItemS2_Items">
           <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
@@ -882,6 +883,7 @@
           <NavigationProperty Name="RegistrationNoS7" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS7_User" FromRole="User" ToRole="RegistrationNoS7" />
           <NavigationProperty Name="RegistrationNoS8" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS8_User" FromRole="User" ToRole="RegistrationNoS8" />
           <NavigationProperty Name="RegistrationNoS2" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS2_User" FromRole="User" ToRole="RegistrationNoS2" />
+          <Property Name="IsEmailVerified" Type="Boolean" />
         </EntityType>
         <Association Name="FK_BridgeRegNoItemS2_Items">
           <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
@@ -1516,6 +1518,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="IsEmailVerified" ColumnName="IsEmailVerified" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
