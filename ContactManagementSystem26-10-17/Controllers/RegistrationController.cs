@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Mail;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -34,6 +35,8 @@ namespace ContactManagementSystem26_10_17.Controllers
                 var dbcontext = new RegisterOwnersContext();
                 dbcontext.Users.Add(data);
                 dbcontext.SaveChanges();
+                SendEmail(data.Email, "Activate Email Link");
+
                 return new RegistrationUserData
                 {
                     IsUserRegisterd = true,
@@ -58,7 +61,7 @@ namespace ContactManagementSystem26_10_17.Controllers
             var dbcontext = new RegisterOwnersContext();
             var userEntity = dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password);
             if (userEntity == null)
-                return new 
+                return new
                 {
                     IsSignedIn = false,
                     Message = "User Does Not Exist",
@@ -67,9 +70,9 @@ namespace ContactManagementSystem26_10_17.Controllers
             {
                 IsSignedIn = true,
                 Message = "SuccessFully SignedIn",
-                LogInResponse= Mapper.Map<User, UserDto>(userEntity)
+                LogInResponse = Mapper.Map<User, UserDto>(userEntity)
             };
-           // return Mapper.Map<User, UserDto>(userEntity);
+            // return Mapper.Map<User, UserDto>(userEntity);
         }
         [HttpPost]
         public dynamic GetAutoRegistrationNo(GetRegistrationNoInput input)
@@ -88,6 +91,32 @@ namespace ContactManagementSystem26_10_17.Controllers
             return new AccountAppService().UpdateUser(input);
         }
 
+        // Sending Email Code
+
+        public void SendEmail(string email, string body)
+        {
+            var SenderEmail = new MailAddress("hammadhassan4424@gmail.com");
+            var ReceiverEmail = new MailAddress(email);
+            var password = "xploiter1702211fc";
+            var subject = "Email Verification Register Owner";
+
+            var Body = body;
+            var smtp = new SmtpClient()
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(SenderEmail.Address, password)
+            };
+
+            var mess = new MailMessage(SenderEmail, ReceiverEmail);
+            mess.Body = Body;
+            mess.Subject = subject;
+            smtp.Send(mess);
+
+        }
 
 
     }
@@ -100,7 +129,7 @@ namespace ContactManagementSystem26_10_17.Controllers
 
     }
 
-    public  class UserDto
+    public class UserDto
     {
 
         public int Id { get; set; }
