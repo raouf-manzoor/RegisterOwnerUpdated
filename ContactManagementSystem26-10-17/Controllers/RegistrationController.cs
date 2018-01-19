@@ -59,7 +59,7 @@ namespace ContactManagementSystem26_10_17.Controllers
         public dynamic SignIn(User input)
         {
             var dbcontext = new RegisterOwnersContext();
-            var userEntity = dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password);
+            var userEntity = dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password && e.IsEmailVerified == true);
             if (userEntity == null)
                 return new
                 {
