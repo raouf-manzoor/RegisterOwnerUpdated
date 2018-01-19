@@ -66,7 +66,8 @@ namespace ContactManagementSystem26_10_17.Controllers
                 return new
                 {
                     IsSignedIn = false,
-                    Message = "User Does Not Exist",
+                    //Message = "User Does Not Exist",
+                    Message= dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password) !=null? "Verify Email": "User Does Not Exist"
                 };
             return new
             {
