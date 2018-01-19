@@ -301,7 +301,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
             }
 
         }
-        public List<GetOwnedRegistrationNumbersOutput> GetOwnedRegistrationNumbers(GetOwnedRegistrationNumbersInput input)
+        public dynamic GetOwnedRegistrationNumbers(GetOwnedRegistrationNumbersInput input)
         {
             var dbcontext = new RegisterOwnersContext();
             var user = dbcontext.Users.Single(e => e.Id == input.UserId);
@@ -388,7 +388,11 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
             totalRegNoList.AddRange(regNoS6List);
             totalRegNoList.AddRange(regNoS7List);
             totalRegNoList.AddRange(regNoS8List);
-            return totalRegNoList;
+            return new
+            {
+                RegNosList= totalRegNoList
+            };
+           // return totalRegNoList;
         }
     }
 }
