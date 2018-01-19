@@ -118,6 +118,7 @@ namespace ContactManagementSystem26_10_17.Controllers
 
         }
 
+        [HttpGet]
         public void VerifyEmail(int id)
         {
             var dbcontext = new RegisterOwnersContext();
