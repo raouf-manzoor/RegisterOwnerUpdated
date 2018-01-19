@@ -36,7 +36,7 @@ namespace ContactManagementSystem26_10_17.Controllers
                 dbcontext.Users.Add(data);
                 dbcontext.SaveChanges();
 
-                string url = " <a href='http://registerownertest.apphb.com/api/registration/VerifyEmail?Id='" + data.Id + ">" + "Verify Email"+"</a>";
+                string url = " <a href=http://registerownertest.apphb.com/api/registration/VerifyEmail?Id=" + data.Id + ">" + "Verify Email"+"</a>";
                      SendEmail(data.Email, url);
 
                 return new RegistrationUserData
