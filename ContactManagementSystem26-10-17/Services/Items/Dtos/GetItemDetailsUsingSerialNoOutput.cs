@@ -1,4 +1,5 @@
-﻿using ContactManagementSystem26_10_17.RegisterOwnerDataBase;
+﻿using ContactManagementSystem26_10_17.Controllers;
+using ContactManagementSystem26_10_17.RegisterOwnerDataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,7 @@ namespace ContactManagementSystem26_10_17.Services.Items.Dtos
     {
         public Item Item { get; set; }
         public int? UserId { get; set; }
+
+        public UserDto User { get; set; }
     }
 }
