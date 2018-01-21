@@ -285,21 +285,23 @@ namespace ContactManagementSystem26_10_17.Services.Items
                 {
                     var user = e.Item.BridgeRegNoItemsS1.First().RegistrationNoS1.User;
                     //e.User = Mapper.Map<User, UserDto>(user);
-                    e.User = user;
+                    e.User = dbcontext.Users.AsNoTracking().Single(u => u.Id == user.Id);
                     e.UserId = user.Id;
                 }
                 else if (e.Item.BridgeRegNoItemS2.Count > 0)
                 {
                     var user = e.Item.BridgeRegNoItemS2.First().RegistrationNoS2.User;
                     //e.User = Mapper.Map<User, UserDto>(user);
-                    e.User = user;
+                    //e.User = user;
+                    e.User = dbcontext.Users.AsNoTracking().Single(u => u.Id == user.Id);
                     e.UserId = user.Id;
                 }
                 else if (e.Item.BridgeRegNoItemsS3.Count > 0)
                 {
                     var user = e.Item.BridgeRegNoItemsS3.First().RegistrationNoS3.User;
                     //e.User = Mapper.Map<User, UserDto>(user);
-                    e.User = user;
+                    //e.User = user;
+                    e.User = dbcontext.Users.AsNoTracking().Single(u => u.Id == user.Id);
                     e.UserId = user.Id;
                 }
                 else if (e.Item.BridgeRegNoItemsS4.Count > 0)
@@ -307,7 +309,8 @@ namespace ContactManagementSystem26_10_17.Services.Items
                     var user = e.Item.BridgeRegNoItemsS4.First().RegistrationNoS4.User;
                     //e.User = Mapper.Map<User, UserDto>(user);
                     //e.User = Mapper.Map<User, UserDto>(user);
-                    e.User = user;
+                    //e.User = user;
+                    e.User = dbcontext.Users.AsNoTracking().Single(u => u.Id == user.Id);
                     e.UserId = user.Id;
                 }
                 else if (e.Item.BridgeRegNoItemsS5.Count > 0)
@@ -315,7 +318,8 @@ namespace ContactManagementSystem26_10_17.Services.Items
                     var user = e.Item.BridgeRegNoItemsS5.First().RegistrationNoS5.User;
                     //e.User = Mapper.Map<User, UserDto>(user);
                     //e.User = Mapper.Map<User, UserDto>(user);
-                    e.User = user;
+                    //e.User = user;
+                    e.User = dbcontext.Users.AsNoTracking().Single(u => u.Id == user.Id);
                     e.UserId = user.Id;
                 }
                 else if (e.Item.BridgeRegNoItemsS6.Count > 0)
@@ -323,7 +327,8 @@ namespace ContactManagementSystem26_10_17.Services.Items
                     var user = e.Item.BridgeRegNoItemsS6.First().RegistrationNoS6.User;
                     //e.User = Mapper.Map<User, UserDto>(user);
                     //e.User = Mapper.Map<User, UserDto>(user);
-                    e.User = user;
+                    //e.User = user;
+                    e.User = dbcontext.Users.AsNoTracking().Single(u => u.Id == user.Id);
                     e.UserId = user.Id;
                 }
                 else if (e.Item.BridgeRegNoItemsS7.Count > 0)
@@ -331,7 +336,8 @@ namespace ContactManagementSystem26_10_17.Services.Items
                     var user = e.Item.BridgeRegNoItemsS7.First().RegistrationNoS7.User;
                     //e.User = Mapper.Map<User, UserDto>(user);
                     //e.User = Mapper.Map<User, UserDto>(user);
-                    e.User = user;
+                    //e.User = user;
+                    e.User = dbcontext.Users.AsNoTracking().Single(u => u.Id == user.Id);
                     e.UserId = user.Id;
                 }
                 else if (e.Item.BridgeRegNosItemS8.Count > 0)
@@ -339,14 +345,15 @@ namespace ContactManagementSystem26_10_17.Services.Items
                     var user = e.Item.BridgeRegNosItemS8.First().RegistrationNoS8.User;
                     //e.User = Mapper.Map<User, UserDto>(user);
                     //e.User = Mapper.Map<User, UserDto>(user);
-                    e.User = user;
+                    //e.User = user;
+                    e.User = dbcontext.Users.AsNoTracking().Single(u => u.Id == user.Id);
                     e.UserId = user.Id;
                 }
             });
             return listOfData.Select(e => new
             {
                 UserId = e.UserId,
-                User = e.User,
+                UserDto = Mapper.Map<User, UserDto>(e.User),
                 Item = Mapper.Map<Item, ItemDto>(e.Item)
             }).ToList();
 
