@@ -13,5 +13,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos.Dtos
 
         public int? RegNoId { get; set; }
         public int UserId { get; set; }
+
+        public bool? PaidStatus { get; set; }
     }
 }

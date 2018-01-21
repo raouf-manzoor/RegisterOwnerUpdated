@@ -311,7 +311,9 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                        UserId = input.UserId,
                        ItemId = e.BridgeRegNoItemsS1.Count > 0 ? (e.BridgeRegNoItemsS1.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS1.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
                        RegNo = e.RegNo,
-                       RegNoId = e.Id
+                       RegNoId = e.Id,
+                       PaidStatus = e.PaidStatus
+                       
                    });
             var regNoS2List = user.RegistrationNoS2.
                    Select(e => new GetOwnedRegistrationNumbersOutput()
@@ -321,7 +323,9 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                        //ItemId = e.ItemId,
                        ItemId = e.BridgeRegNoItemS2.Count > 0 ? (e.BridgeRegNoItemS2.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemS2.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
                        RegNo = e.RegNo,
-                       RegNoId = e.Id
+                       RegNoId = e.Id,
+                       PaidStatus = e.PaidStatus
+
                    });
             var regNoS3List = user.RegistrationNoS3.
                    Select(e => new GetOwnedRegistrationNumbersOutput()
@@ -330,7 +334,8 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                        //ItemId = e.ItemId,
                        RegNo = e.RegNo,
                        ItemId = e.BridgeRegNoItemsS3.Count > 0 ? (e.BridgeRegNoItemsS3.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS3.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
-                       RegNoId = e.Id
+                       RegNoId = e.Id,
+                       PaidStatus = e.PaidStatus
                    });
             var regNoS4List = user.RegistrationNoS4.
               Select(e => new GetOwnedRegistrationNumbersOutput()
@@ -339,7 +344,8 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                   //ItemId = e.ItemId,
                   RegNo = e.RegNo,
                   ItemId = e.BridgeRegNoItemsS4.Count > 0 ? (e.BridgeRegNoItemsS4.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS4.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
-                  RegNoId = e.Id
+                  RegNoId = e.Id,
+                  PaidStatus = e.PaidStatus
 
               });
             var regNoS5List = user.RegistrationNoS5.
@@ -349,7 +355,8 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                   //ItemId = e.ItemId,
                   RegNo = e.RegNo,
                   ItemId = e.BridgeRegNoItemsS5.Count > 0 ? (e.BridgeRegNoItemsS5.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS5.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
-                  RegNoId = e.Id
+                  RegNoId = e.Id,
+                  PaidStatus = e.PaidStatus
 
               });
             var regNoS6List = user.RegistrationNoS6.
@@ -359,7 +366,8 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                   //ItemId = e.ItemId,
                   RegNo = e.RegNo,
                   ItemId = e.BridgeRegNoItemsS6.Count > 0 ? (e.BridgeRegNoItemsS6.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS6.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
-                  RegNoId = e.Id
+                  RegNoId = e.Id,
+                  PaidStatus = e.PaidStatus
               });
             var regNoS7List = user.RegistrationNoS7.
               Select(e => new GetOwnedRegistrationNumbersOutput()
@@ -368,7 +376,8 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                   //ItemId = e.ItemId,
                   RegNo = e.RegNo,
                   ItemId = e.BridgeRegNoItemsS7.Count > 0 ? (e.BridgeRegNoItemsS7.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNoItemsS7.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
-                  RegNoId = e.Id
+                  RegNoId = e.Id,
+                  PaidStatus = e.PaidStatus
               });
             var regNoS8List = user.RegistrationNoS8.
               Select(e => new GetOwnedRegistrationNumbersOutput()
@@ -377,7 +386,8 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                   //ItemId = e.ItemId,
                   RegNo = e.RegNo,
                   ItemId = e.BridgeRegNosItemS8.Count > 0 ? (e.BridgeRegNosItemS8.FirstOrDefault(b => b.RegId == e.Id) != null ? e.BridgeRegNosItemS8.FirstOrDefault(b => b.RegId == e.Id).ItemId : null) : null,
-                  RegNoId = e.Id
+                  RegNoId = e.Id,
+                  PaidStatus = e.PaidStatus
               });
             var totalRegNoList = new List<GetOwnedRegistrationNumbersOutput>();
             totalRegNoList.AddRange(regNoS1List);
