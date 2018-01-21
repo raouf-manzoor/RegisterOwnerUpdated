@@ -12,6 +12,6 @@ namespace ContactManagementSystem26_10_17.Services.Items.Dtos
         public Item Item { get; set; }
         public int? UserId { get; set; }
 
-        public UserDto User { get; set; }
+        public User User { get; set; }
     }
 }
