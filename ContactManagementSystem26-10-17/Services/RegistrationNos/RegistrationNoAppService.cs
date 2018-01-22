@@ -65,7 +65,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     currentRegistrationNo.TwoDigit = oneDigitString;
                     dbcontext.RegistrationNoS2.Add(regNos2);
                     dbcontext.SaveChanges();
-                    var currRegNo = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
+                    var currRegNo = dbcontext.RegistrationNoS2.FirstOrDefault(e => e.RegNo == oneDigitString);
                     regNoId = currRegNo.Id;
 
                 }
@@ -90,7 +90,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     currentRegistrationNo.ThreeDigit = oneDigitString;
                     dbcontext.RegistrationNoS3.Add(regNos3);
                     dbcontext.SaveChanges();
-                    var currRegNo = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
+                    var currRegNo = dbcontext.RegistrationNoS3.FirstOrDefault(e => e.RegNo == oneDigitString);
                     regNoId = currRegNo.Id;
                 }
 
@@ -115,7 +115,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     currentRegistrationNo.FourDigit = oneDigitString;
                     dbcontext.RegistrationNoS4.Add(regNos4);
                     dbcontext.SaveChanges();
-                    var currRegNo = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
+                    var currRegNo = dbcontext.RegistrationNoS4.FirstOrDefault(e => e.RegNo == oneDigitString);
                     regNoId = currRegNo.Id;
                 }
 
@@ -142,7 +142,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     currentRegistrationNo.FiveDigit = oneDigitString;
                     dbcontext.RegistrationNoS5.Add(regNos5);
                     dbcontext.SaveChanges();
-                    var currRegNo = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
+                    var currRegNo = dbcontext.RegistrationNoS5.FirstOrDefault(e => e.RegNo == oneDigitString);
                     regNoId = currRegNo.Id;
                 }
                 else if (input.Digits == 6)
@@ -166,7 +166,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     currentRegistrationNo.SixDigit = oneDigitString;
                     dbcontext.RegistrationNoS6.Add(regNos6);
                     dbcontext.SaveChanges();
-                    var currRegNo = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
+                    var currRegNo = dbcontext.RegistrationNoS6.FirstOrDefault(e => e.RegNo == oneDigitString);
                     regNoId = currRegNo.Id;
                 }
 
@@ -192,7 +192,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     currentRegistrationNo.SevenDigit = oneDigitString;
                     dbcontext.RegistrationNoS7.Add(regNos7);
                     dbcontext.SaveChanges();
-                    var currRegNo = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
+                    var currRegNo = dbcontext.RegistrationNoS7.FirstOrDefault(e => e.RegNo == oneDigitString);
                     regNoId = currRegNo.Id;
                 }
                 else if (input.Digits == 8)
@@ -216,7 +216,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     currentRegistrationNo.EightDigit = oneDigitString;
                     dbcontext.RegistrationNoS8.Add(regNos8);
                     dbcontext.SaveChanges();
-                    var currRegNo = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
+                    var currRegNo = dbcontext.RegistrationNoS8.FirstOrDefault(e => e.RegNo == oneDigitString);
                     regNoId = currRegNo.Id;
                 }
                 return new
