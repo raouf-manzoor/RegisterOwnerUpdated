@@ -105,16 +105,16 @@ namespace ContactManagementSystem26_10_17.Controllers
 
         public void SendEmail(string email, string body)
         {
-            var SenderEmail = new MailAddress("noreply@registerowner.com");
+            var SenderEmail = new MailAddress("hammadhassan4424@gmail.com");
             var ReceiverEmail = new MailAddress(email);
-            var password = "Norway20xx";
+            var password = "xploiter1702211fc";
             var subject = "Email Verification Register Owner";
 
             var Body = body;
             var smtp = new SmtpClient()
             {
                 Host = "smtp.gmail.com",
-                Port = 465,
+                Port = 587,
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
