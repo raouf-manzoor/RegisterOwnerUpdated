@@ -105,9 +105,9 @@ namespace ContactManagementSystem26_10_17.Controllers
 
         public void SendEmail(string email, string body)
         {
-            var SenderEmail = new MailAddress("hammadhassan4424@gmail.com");
+            var SenderEmail = new MailAddress("noreply@registerowner.com");
             var ReceiverEmail = new MailAddress(email);
-            var password = "xploiter1702211fc";
+            var password = "Norway20xx";
             var subject = "Email Verification Register Owner";
 
             var Body = body;
