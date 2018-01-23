@@ -146,15 +146,15 @@ namespace ContactManagementSystem26_10_17.Controllers
 
         }
 
-<<<<<<< HEAD
-        [HttpPost]
-        public void ForgotPassword(ForgotPasswordInput input)
-        {
-            var dbcontext = new RegisterOwnersContext();
-            var user = dbcontext.Users.Single(e => e.Email == input.Email);
-            string url = " <a href=http://registerownertest.apphb.com/Home/ForgotPassword?Id=" + user.Id + ">" + "Forgot Password" + "</a>";
-            SendEmail(input.Email, url);
-        }
+
+        //[HttpPost]
+        //public void ForgotPassword(ForgotPasswordInput input)
+        //{
+        //    var dbcontext = new RegisterOwnersContext();
+        //    var user = dbcontext.Users.Single(e => e.Email == input.Email);
+        //    string url = " <a href=http://registerownertest.apphb.com/Home/ForgotPassword?Id=" + user.Id + ">" + "Forgot Password" + "</a>";
+        //    SendEmail(input.Email, url);
+        //}
 
 
         public bool ChangePassword(User input)
@@ -174,8 +174,7 @@ namespace ContactManagementSystem26_10_17.Controllers
 
         }
 
-=======
->>>>>>> parent of e7c3f92... ForgotPassword Code Added And Checked In
+
     }
 
     public class RegistrationUserData
