@@ -67,7 +67,7 @@ namespace ContactManagementSystem26_10_17.Controllers
                 {
                     IsSignedIn = false,
                     //Message = "User Does Not Exist",
-                    Message= dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password) !=null? "Verify Email": "User Does Not Exist"
+                    Message = dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password) != null ? "Verify Email" : "User Does Not Exist"
                 };
             return new
             {
@@ -146,6 +146,33 @@ namespace ContactManagementSystem26_10_17.Controllers
 
         }
 
+        [HttpPost]
+        public void ForgotPassword(ForgotPasswordInput input)
+        {
+            var dbcontext = new RegisterOwnersContext();
+            var user = dbcontext.Users.Single(e => e.Email == input.Email);
+            string url = " <a href=http://registerownertest.apphb.com/Home/ForgotPassword?Id=" + user.Id + ">" + "Forgot Password" + "</a>";
+            SendEmail(input.Email, url);
+        }
+
+
+        public bool ChangePassword(User input)
+        {
+            try
+            {
+                var dbcontext = new RegisterOwnersContext();
+                var user = dbcontext.Users.Single(e => e.IsEmailVerified == true && e.Id == input.Id);
+                user.Password = input.Password;
+                dbcontext.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
     }
 
     public class RegistrationUserData
@@ -173,5 +200,10 @@ namespace ContactManagementSystem26_10_17.Controllers
         public string MobileNo { get; set; }
 
 
+    }
+
+    public class ForgotPasswordInput
+    {
+        public string Email { get; set; }
     }
 }
