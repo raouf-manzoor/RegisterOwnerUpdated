@@ -67,7 +67,7 @@ namespace ContactManagementSystem26_10_17.Controllers
                 {
                     IsSignedIn = false,
                     //Message = "User Does Not Exist",
-                    Message = dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password) != null ? "Verify Email" : "User Does Not Exist"
+                    Message= dbcontext.Users.FirstOrDefault(e => e.Email == input.Email && e.Password == input.Password) !=null? "Verify Email": "User Does Not Exist"
                 };
             return new
             {
@@ -146,6 +146,7 @@ namespace ContactManagementSystem26_10_17.Controllers
 
         }
 
+<<<<<<< HEAD
         [HttpPost]
         public void ForgotPassword(ForgotPasswordInput input)
         {
@@ -175,6 +176,8 @@ namespace ContactManagementSystem26_10_17.Controllers
 
         }
 
+=======
+>>>>>>> parent of e7c3f92... ForgotPassword Code Added And Checked In
     }
 
     public class RegistrationUserData
@@ -202,10 +205,5 @@ namespace ContactManagementSystem26_10_17.Controllers
         public string MobileNo { get; set; }
 
 
-    }
-
-    public class ForgotPasswordInput
-    {
-        public string Email { get; set; }
     }
 }
