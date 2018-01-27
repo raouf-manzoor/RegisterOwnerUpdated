@@ -659,5 +659,253 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                 };
             }
         }
+
+        public dynamic GetMultipleAutoRegistrationNo(GetMultipleRegistrationNoInput input)
+        {
+            try
+            {
+
+                RegisterOwnersContext dbcontext = new RegisterOwnersContext();
+                var currentRegistrationNo = dbcontext.CurrentRegistrationNoes.First();
+                string oneDigitString = null;
+                List<int> regNoIdList = new List<int>();
+                List<string> regNoStringList = new List<string>();
+                var regNoId = -1;
+                for (int i = 0; i < input.Quantity; i++)
+                {
+                    if (input.Digits == 1)
+                    {
+                        var oneDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.OneDigit) + 1;
+                        oneDigitString = Base36Converter.ConvertToBaseK(oneDigit, 1);
+                        var regNos1Check = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        while (regNos1Check != null)
+                        {
+                            oneDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                            oneDigitString = Base36Converter.ConvertToBaseK(oneDigit, 1);
+                            regNos1Check = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        }
+                        var regNos1 = new RegistrationNoS1()
+                        {
+                            RegNo = oneDigitString,
+                            userId = input.UserId,
+                            PaidStatus = true,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        currentRegistrationNo.OneDigit = oneDigitString;
+                        dbcontext.RegistrationNoS1.Add(regNos1);
+                        dbcontext.SaveChanges();
+                        var currRegNo = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        regNoId = currRegNo.Id;
+                        regNoIdList.Add(regNoId);
+                        regNoStringList.Add(oneDigitString);
+                    }
+
+
+                    else if (input.Digits == 2)
+                    {
+                        var twoDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.TwoDigit) + 1;
+                        oneDigitString = Base36Converter.ConvertToBaseK(twoDigit, 2);
+                        var regNos1Check = dbcontext.RegistrationNoS2.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        while (regNos1Check != null)
+                        {
+                            twoDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                            oneDigitString = Base36Converter.ConvertToBaseK(twoDigit, 2);
+                            regNos1Check = dbcontext.RegistrationNoS2.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        }
+                        var regNos2 = new RegistrationNoS2()
+                        {
+                            RegNo = oneDigitString,
+                            userId = input.UserId,
+                            PaidStatus = true,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        currentRegistrationNo.TwoDigit = oneDigitString;
+                        dbcontext.RegistrationNoS2.Add(regNos2);
+                        dbcontext.SaveChanges();
+                        var currRegNo = dbcontext.RegistrationNoS2.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        regNoId = currRegNo.Id;
+                        regNoIdList.Add(regNoId);
+                        regNoStringList.Add(oneDigitString);
+
+                    }
+                    else if (input.Digits == 3)
+                    {
+                        var threeDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.ThreeDigit) + 1;
+                        oneDigitString = Base36Converter.ConvertToBaseK(threeDigit, 3);
+                        var regNos1Check = dbcontext.RegistrationNoS3.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        while (regNos1Check != null)
+                        {
+                            threeDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                            oneDigitString = Base36Converter.ConvertToBaseK(threeDigit, 3);
+                            regNos1Check = dbcontext.RegistrationNoS3.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        }
+                        var regNos3 = new RegistrationNoS3()
+                        {
+                            RegNo = oneDigitString,
+                            userId = input.UserId,
+                            PaidStatus = true,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        currentRegistrationNo.ThreeDigit = oneDigitString;
+                        dbcontext.RegistrationNoS3.Add(regNos3);
+                        dbcontext.SaveChanges();
+                        var currRegNo = dbcontext.RegistrationNoS3.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        regNoId = currRegNo.Id;
+                        regNoIdList.Add(regNoId);
+                        regNoStringList.Add(oneDigitString);
+                    }
+
+                    else if (input.Digits == 4)
+                    {
+                        var fourDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.FourDigit) + 1;
+                        oneDigitString = Base36Converter.ConvertToBaseK(fourDigit, 4);
+                        var regNos1Check = dbcontext.RegistrationNoS4.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        while (regNos1Check != null)
+                        {
+                            fourDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                            oneDigitString = Base36Converter.ConvertToBaseK(fourDigit, 4);
+                            regNos1Check = dbcontext.RegistrationNoS4.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        }
+                        var regNos4 = new RegistrationNoS4()
+                        {
+                            RegNo = oneDigitString,
+                            userId = input.UserId,
+                            PaidStatus = true,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        currentRegistrationNo.FourDigit = oneDigitString;
+                        dbcontext.RegistrationNoS4.Add(regNos4);
+                        dbcontext.SaveChanges();
+                        var currRegNo = dbcontext.RegistrationNoS4.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        regNoId = currRegNo.Id;
+                        regNoIdList.Add(regNoId);
+                        regNoStringList.Add(oneDigitString);
+                    }
+                    else if (input.Digits == 5)
+                    {
+                        var fiveDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.FiveDigit) + 1;
+                        oneDigitString = Base36Converter.ConvertToBaseK(fiveDigit, 5);
+                        var regNos1Check = dbcontext.RegistrationNoS5.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        while (regNos1Check != null)
+                        {
+                            fiveDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                            oneDigitString = Base36Converter.ConvertToBaseK(fiveDigit, 5);
+                            regNos1Check = dbcontext.RegistrationNoS5.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        }
+                        var regNos5 = new RegistrationNoS5()
+                        {
+                            RegNo = oneDigitString,
+                            userId = input.UserId,
+                            PaidStatus = true,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        currentRegistrationNo.FiveDigit = oneDigitString;
+                        dbcontext.RegistrationNoS5.Add(regNos5);
+                        dbcontext.SaveChanges();
+                        var currRegNo = dbcontext.RegistrationNoS5.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        regNoId = currRegNo.Id;
+                        regNoIdList.Add(regNoId);
+                        regNoStringList.Add(oneDigitString);
+                    }
+                    else if (input.Digits == 6)
+                    {
+                        var sixDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.SixDigit) + 1;
+                        oneDigitString = Base36Converter.ConvertToBaseK(sixDigit, 6);
+                        var regNos1Check = dbcontext.RegistrationNoS6.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        while (regNos1Check != null)
+                        {
+                            sixDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                            oneDigitString = Base36Converter.ConvertToBaseK(sixDigit, 6);
+                            regNos1Check = dbcontext.RegistrationNoS6.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        }
+                        var regNos6 = new RegistrationNoS6()
+                        {
+                            RegNo = oneDigitString,
+                            userId = input.UserId,
+                            PaidStatus = true,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        currentRegistrationNo.SixDigit = oneDigitString;
+                        dbcontext.RegistrationNoS6.Add(regNos6);
+                        dbcontext.SaveChanges();
+                        var currRegNo = dbcontext.RegistrationNoS6.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        regNoId = currRegNo.Id;
+                        regNoIdList.Add(regNoId);
+                        regNoStringList.Add(oneDigitString);
+                    }
+
+
+                    else if (input.Digits == 7)
+                    {
+                        var sevenDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.SevenDigit) + 1;
+                        oneDigitString = Base36Converter.ConvertToBaseK(sevenDigit, 7);
+                        var regNos1Check = dbcontext.RegistrationNoS7.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        while (regNos1Check != null)
+                        {
+                            sevenDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                            oneDigitString = Base36Converter.ConvertToBaseK(sevenDigit, 7);
+                            regNos1Check = dbcontext.RegistrationNoS7.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        }
+                        var regNos7 = new RegistrationNoS7()
+                        {
+                            RegNo = oneDigitString,
+                            userId = input.UserId,
+                            PaidStatus = true,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        currentRegistrationNo.SevenDigit = oneDigitString;
+                        dbcontext.RegistrationNoS7.Add(regNos7);
+                        dbcontext.SaveChanges();
+                        var currRegNo = dbcontext.RegistrationNoS7.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        regNoId = currRegNo.Id;
+                        regNoIdList.Add(regNoId);
+                        regNoStringList.Add(oneDigitString);
+                    }
+                    else if (input.Digits == 8)
+                    {
+                        var eightDigit = Base36Converter.ConvertToBase10(currentRegistrationNo.EightDigit) + 1;
+                        oneDigitString = Base36Converter.ConvertToBaseK(eightDigit, 8);
+                        var regNos1Check = dbcontext.RegistrationNoS8.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        while (regNos1Check != null)
+                        {
+                            eightDigit = Base36Converter.ConvertToBase10(oneDigitString) + 1;
+                            oneDigitString = Base36Converter.ConvertToBaseK(eightDigit, 8);
+                            regNos1Check = dbcontext.RegistrationNoS8.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        }
+                        var regNos8 = new RegistrationNoS8()
+                        {
+                            RegNo = oneDigitString,
+                            userId = input.UserId,
+                            PaidStatus = true,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        currentRegistrationNo.EightDigit = oneDigitString;
+                        dbcontext.RegistrationNoS8.Add(regNos8);
+                        dbcontext.SaveChanges();
+                        var currRegNo = dbcontext.RegistrationNoS8.FirstOrDefault(e => e.RegNo == oneDigitString);
+                        regNoId = currRegNo.Id;
+                        regNoIdList.Add(regNoId);
+                        regNoStringList.Add(oneDigitString);
+                    }
+                }
+
+                return new
+                {
+                    IsGenerated = true,
+                    RegNoIdList = regNoIdList,
+                    RegNoStringList = regNoStringList
+                };
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+                    IsGenerated = false,
+                    RegNoId = "-1",
+                    RegNo = "-1"
+                };
+            }
+
+        }
     }
 }

@@ -273,6 +273,7 @@
     <Compile Include="Services\RegistrationNos\Dtos\GetOwnedRegistrationNumbersInput.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetOwnedRegistrationNumbersOutput.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetManualRegistrationNoInput.cs" />
+    <Compile Include="Services\RegistrationNos\Dtos\GetMultipleRegistrationNoInput.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\TransferRegistrationNumberToNewUserInput.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetRegistrationNoInput.cs" />
     <Compile Include="Services\RegistrationNos\RegistrationNoAppService.cs" />
