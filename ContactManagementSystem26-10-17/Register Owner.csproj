@@ -217,6 +217,9 @@
     <Compile Include="RegisterOwnerDataBase\Item.cs">
       <DependentUpon>RegisterOwnerDataBase.tt</DependentUpon>
     </Compile>
+    <Compile Include="RegisterOwnerDataBase\ItemOwnerHistory.cs">
+      <DependentUpon>RegisterOwnerDataBase.tt</DependentUpon>
+    </Compile>
     <Compile Include="RegisterOwnerDataBase\RegisterOwnerDataBase.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

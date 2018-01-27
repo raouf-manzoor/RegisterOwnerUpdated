@@ -83,6 +83,30 @@
           <Property Name="SevenDigit" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="EightDigit" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="ItemOwnerHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemIdMain" Type="int" Nullable="false" />
+          <Property Name="Category" Type="varchar" MaxLength="50" />
+          <Property Name="DateOfPurchase" Type="datetime" />
+          <Property Name="BoolDateOfPurchase" Type="bit" />
+          <Property Name="BoolItem" Type="bit" />
+          <Property Name="BoolPlace" Type="bit" />
+          <Property Name="BoolAdress" Type="bit" />
+          <Property Name="BoolFirstName" Type="bit" />
+          <Property Name="BoolLastName" Type="bit" />
+          <Property Name="BoolPhoneNo" Type="bit" />
+          <Property Name="BoolEmail" Type="bit" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Adress" Type="varchar" MaxLength="50" />
+          <Property Name="Place" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+          <Property Name="RegNo" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Items">
           <Key>
             <PropertyRef Name="Id" />
@@ -220,7 +244,7 @@
           <Property Name="ZipCode" Type="varchar" MaxLength="50" />
           <Property Name="Place" Type="varchar" MaxLength="50" />
           <Property Name="Country" Type="varchar" MaxLength="50" />
-          <Property Name="MobileNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="50" />
           <Property Name="IsEmailVerified" Type="bit" />
         </EntityType>
         <Association Name="FK_BridgeRegNoItemS2_Items">
@@ -521,6 +545,7 @@
           <EntitySet Name="BridgeRegNoItemsS7" EntityType="Self.BridgeRegNoItemsS7" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BridgeRegNosItemS8" EntityType="Self.BridgeRegNosItemS8" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CurrentRegistrationNo" EntityType="Self.CurrentRegistrationNo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ItemOwnerHistory" EntityType="Self.ItemOwnerHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RegistrationNoS1" EntityType="Self.RegistrationNoS1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RegistrationNoS2" EntityType="Self.RegistrationNoS2" Schema="dbo" store:Type="Tables" />
@@ -874,7 +899,7 @@
           <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Place" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="RegistrationNoS1" Relationship="Self.FK_RegistrationNoS1_User" FromRole="User" ToRole="RegistrationNoS1" />
           <NavigationProperty Name="RegistrationNoS3" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS3_User" FromRole="User" ToRole="RegistrationNoS3" />
           <NavigationProperty Name="RegistrationNoS4" Relationship="dbc940850377cd4fbf9932a82900d1c789Model.FK_RegistrationNoS4_User" FromRole="User" ToRole="RegistrationNoS4" />
@@ -1206,6 +1231,7 @@
             <End Role="User" EntitySet="Users" />
             <End Role="RegistrationNoS2" EntitySet="RegistrationNoS2" />
           </AssociationSet>
+          <EntitySet Name="ItemOwnerHistories" EntityType="dbc940850377cd4fbf9932a82900d1c789Model.ItemOwnerHistory" />
         </EntityContainer>
         <EntityType Name="CurrentRegistrationNo">
           <Key>
@@ -1305,6 +1331,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="ItemOwnerHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemIdMain" Type="Int32" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfPurchase" Type="DateTime" Precision="3" />
+          <Property Name="BoolDateOfPurchase" Type="Boolean" />
+          <Property Name="BoolItem" Type="Boolean" />
+          <Property Name="BoolPlace" Type="Boolean" />
+          <Property Name="BoolAdress" Type="Boolean" />
+          <Property Name="BoolFirstName" Type="Boolean" />
+          <Property Name="BoolLastName" Type="Boolean" />
+          <Property Name="BoolPhoneNo" Type="Boolean" />
+          <Property Name="BoolEmail" Type="Boolean" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Place" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RegNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1545,6 +1595,31 @@
                 <ScalarProperty Name="ThreeDigit" ColumnName="ThreeDigit" />
                 <ScalarProperty Name="TwoDigit" ColumnName="TwoDigit" />
                 <ScalarProperty Name="OneDigit" ColumnName="OneDigit" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItemOwnerHistories">
+            <EntityTypeMapping TypeName="dbc940850377cd4fbf9932a82900d1c789Model.ItemOwnerHistory">
+              <MappingFragment StoreEntitySet="ItemOwnerHistory">
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Place" ColumnName="Place" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="BoolEmail" ColumnName="BoolEmail" />
+                <ScalarProperty Name="BoolPhoneNo" ColumnName="BoolPhoneNo" />
+                <ScalarProperty Name="BoolLastName" ColumnName="BoolLastName" />
+                <ScalarProperty Name="BoolFirstName" ColumnName="BoolFirstName" />
+                <ScalarProperty Name="BoolAdress" ColumnName="BoolAdress" />
+                <ScalarProperty Name="BoolPlace" ColumnName="BoolPlace" />
+                <ScalarProperty Name="BoolItem" ColumnName="BoolItem" />
+                <ScalarProperty Name="BoolDateOfPurchase" ColumnName="BoolDateOfPurchase" />
+                <ScalarProperty Name="DateOfPurchase" ColumnName="DateOfPurchase" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="ItemIdMain" ColumnName="ItemIdMain" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
