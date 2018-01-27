@@ -118,7 +118,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
             //var currentRegistrationNo = dbcontext.CurrentRegistrationNoes.First();
             if (input.RegNo.Length == 1)
             {
-                var regNo = dbcontext.RegistrationNoS1.SingleOrDefault(e => e.Id == input.RegNoId);
+                var regNo = dbcontext.RegistrationNoS1.SingleOrDefault(e => e.RegNo == input.RegNo);
                 var itemToCheck = regNo.BridgeRegNoItemsS1.FirstOrDefault();
                 if (itemToCheck != null)
                 {
@@ -128,11 +128,12 @@ namespace ContactManagementSystem26_10_17.Services.Items
                 {
                     UserId = regNo.userId,
                     Item = item != null ? Mapper.Map<Item, ItemDto>(item) : null,
+                    User = Mapper.Map<User, UserDto>(regNo.User),
                 };
             }
             else if (input.RegNo.Length == 2)
             {
-                var regNo = dbcontext.RegistrationNoS2.SingleOrDefault(e => e.Id == input.RegNoId);
+                var regNo = dbcontext.RegistrationNoS2.SingleOrDefault(e => e.RegNo == input.RegNo);
                 var itemToCheck = regNo.BridgeRegNoItemS2.FirstOrDefault();
                 if (itemToCheck != null)
                 {
@@ -146,7 +147,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
             }
             else if (input.RegNo.Length == 3)
             {
-                var regNo = dbcontext.RegistrationNoS3.SingleOrDefault(e => e.Id == input.RegNoId);
+                var regNo = dbcontext.RegistrationNoS3.SingleOrDefault(e => e.RegNo == input.RegNo);
                 var itemToCheck = regNo.BridgeRegNoItemsS3.FirstOrDefault();
                 if (itemToCheck != null)
                 {
@@ -160,7 +161,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
             }
             else if (input.RegNo.Length == 4)
             {
-                var regNo = dbcontext.RegistrationNoS4.SingleOrDefault(e => e.Id == input.RegNoId);
+                var regNo = dbcontext.RegistrationNoS4.SingleOrDefault(e => e.RegNo == input.RegNo);
                 var itemToCheck = regNo.BridgeRegNoItemsS4.FirstOrDefault();
                 if (itemToCheck != null)
                 {
@@ -174,7 +175,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
             }
             else if (input.RegNo.Length == 5)
             {
-                var regNo = dbcontext.RegistrationNoS5.SingleOrDefault(e => e.Id == input.RegNoId);
+                var regNo = dbcontext.RegistrationNoS5.SingleOrDefault(e => e.RegNo == input.RegNo);
                 var itemToCheck = regNo.BridgeRegNoItemsS5.FirstOrDefault();
                 if (itemToCheck != null)
                 {
@@ -188,7 +189,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
             }
             else if (input.RegNo.Length == 6)
             {
-                var regNo = dbcontext.RegistrationNoS6.SingleOrDefault(e => e.Id == input.RegNoId);
+                var regNo = dbcontext.RegistrationNoS6.SingleOrDefault(e => e.RegNo == input.RegNo);
                 var itemToCheck = regNo.BridgeRegNoItemsS6.FirstOrDefault();
                 if (itemToCheck != null)
                 {
@@ -202,7 +203,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
             }
             else if (input.RegNo.Length == 7)
             {
-                var regNo = dbcontext.RegistrationNoS7.SingleOrDefault(e => e.Id == input.RegNoId);
+                var regNo = dbcontext.RegistrationNoS7.SingleOrDefault(e => e.RegNo == input.RegNo);
                 var itemToCheck = regNo.BridgeRegNoItemsS7.FirstOrDefault();
                 if (itemToCheck != null)
                 {
@@ -216,7 +217,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
             }
             else if (input.RegNo.Length == 8)
             {
-                var regNo = dbcontext.RegistrationNoS8.SingleOrDefault(e => e.Id == input.RegNoId);
+                var regNo = dbcontext.RegistrationNoS8.SingleOrDefault(e => e.RegNo == input.RegNo);
                 var itemToCheck = regNo.BridgeRegNosItemS8.FirstOrDefault();
                 if (itemToCheck != null)
                 {
