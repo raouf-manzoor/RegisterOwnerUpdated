@@ -249,7 +249,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                        RegNo = e.RegNo,
                        RegNoId = e.Id,
                        PaidStatus = e.PaidStatus
-                       
+
                    });
             var regNoS2List = user.RegistrationNoS2.
                    Select(e => new GetOwnedRegistrationNumbersOutput()
@@ -340,7 +340,6 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
             };
             // return totalRegNoList;
         }
-
         public dynamic TransferRegistrationNumberToNewUser(TransferRegistrationNumberToNewUserInput input)
         {
             try
@@ -423,6 +422,233 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     Message = "",
                     ErrorException = ex
 
+                };
+            }
+        }
+
+        public dynamic GetManualRegistrationNumber(GetManualRegistrationNoInput input)
+        {
+            try
+            {
+                //catch { }
+                RegisterOwnersContext dbcontext = new RegisterOwnersContext();
+                var size = input.RegNo.Length;
+                string regNoString = null;
+                var regNoId = -1;
+                if (size == 1)
+                {
+                    var regNo = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == input.RegNo);
+                    if (regNo == null)
+                    {
+                        var regNos1 = new RegistrationNoS1()
+                        {
+                            RegNo = input.RegNo,
+                            userId = input.UserId,
+                            PaidStatus = false,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        regNoString = input.RegNo;
+                        regNoId = regNos1.Id;
+                        dbcontext.RegistrationNoS1.Add(regNos1);
+                        dbcontext.SaveChanges();
+                    }
+                    else
+                        return new
+                        {
+                            IsGenerated = false,
+                            RegNoId = "-1",
+                            RegNo = "-1"
+                        };
+                }
+                else if (size == 2)
+                {
+                    var regNo = dbcontext.RegistrationNoS2.FirstOrDefault(e => e.RegNo == input.RegNo);
+                    if (regNo == null)
+                    {
+                        var regNos2 = new RegistrationNoS2()
+                        {
+                            RegNo = input.RegNo,
+                            userId = input.UserId,
+                            PaidStatus = false,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        regNoString = input.RegNo;
+                        regNoId = regNos2.Id;
+                        dbcontext.RegistrationNoS2.Add(regNos2);
+                        dbcontext.SaveChanges();
+                    }
+                    else
+                        return new
+                        {
+                            IsGenerated = false,
+                            RegNoId = "-1",
+                            RegNo = "-1"
+                        };
+                }
+                else if (size == 3)
+                {
+                    var regNo = dbcontext.RegistrationNoS3.FirstOrDefault(e => e.RegNo == input.RegNo);
+                    if (regNo == null)
+                    {
+                        var regNos3 = new RegistrationNoS3()
+                        {
+                            RegNo = input.RegNo,
+                            userId = input.UserId,
+                            PaidStatus = false,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        regNoString = input.RegNo;
+                        regNoId = regNos3.Id;
+                        dbcontext.RegistrationNoS3.Add(regNos3);
+                        dbcontext.SaveChanges();
+                    }
+                    else
+                        return new
+                        {
+                            IsGenerated = false,
+                            RegNoId = "-1",
+                            RegNo = "-1"
+                        };
+                }
+                else if (size == 4)
+                {
+                    var regNo = dbcontext.RegistrationNoS4.FirstOrDefault(e => e.RegNo == input.RegNo);
+                    if (regNo == null)
+                    {
+                        var regNos4 = new RegistrationNoS4()
+                        {
+                            RegNo = input.RegNo,
+                            userId = input.UserId,
+                            PaidStatus = false,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        regNoString = input.RegNo;
+                        regNoId = regNos4.Id;
+                        dbcontext.RegistrationNoS4.Add(regNos4);
+                        dbcontext.SaveChanges();
+                    }
+                    else
+                        return new
+                        {
+                            IsGenerated = false,
+                            RegNoId = "-1",
+                            RegNo = "-1"
+                        };
+                }
+                else if (size == 5)
+                {
+                    var regNo = dbcontext.RegistrationNoS5.FirstOrDefault(e => e.RegNo == input.RegNo);
+                    if (regNo == null)
+                    {
+                        var regNos5 = new RegistrationNoS5()
+                        {
+                            RegNo = input.RegNo,
+                            userId = input.UserId,
+                            PaidStatus = false,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        regNoString = input.RegNo;
+                        regNoId = regNos5.Id;
+                        dbcontext.RegistrationNoS5.Add(regNos5);
+                        dbcontext.SaveChanges();
+                    }
+                    else
+                        return new
+                        {
+                            IsGenerated = false,
+                            RegNoId = "-1",
+                            RegNo = "-1"
+                        };
+                }
+                else if (size == 6)
+                {
+                    var regNo = dbcontext.RegistrationNoS6.FirstOrDefault(e => e.RegNo == input.RegNo);
+                    if (regNo == null)
+                    {
+                        var regNos6 = new RegistrationNoS6()
+                        {
+                            RegNo = input.RegNo,
+                            userId = input.UserId,
+                            PaidStatus = false,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        regNoString = input.RegNo;
+                        regNoId = regNos6.Id;
+                        dbcontext.RegistrationNoS6.Add(regNos6);
+                        dbcontext.SaveChanges();
+                    }
+                    else
+                        return new
+                        {
+                            IsGenerated = false,
+                            RegNoId = "-1",
+                            RegNo = "-1"
+                        };
+                }
+                else if (size == 7)
+                {
+                    var regNo = dbcontext.RegistrationNoS7.FirstOrDefault(e => e.RegNo == input.RegNo);
+                    if (regNo == null)
+                    {
+                        var regNos7 = new RegistrationNoS7()
+                        {
+                            RegNo = input.RegNo,
+                            userId = input.UserId,
+                            PaidStatus = false,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        regNoString = input.RegNo;
+                        regNoId = regNos7.Id;
+                        dbcontext.RegistrationNoS7.Add(regNos7);
+                        dbcontext.SaveChanges();
+                    }
+                    else
+                        return new
+                        {
+                            IsGenerated = false,
+                            RegNoId = "-1",
+                            RegNo = "-1"
+                        };
+                }
+                else if (size == 8)
+                {
+                    var regNo = dbcontext.RegistrationNoS8.FirstOrDefault(e => e.RegNo == input.RegNo);
+                    if (regNo == null)
+                    {
+                        var regNos8 = new RegistrationNoS8()
+                        {
+                            RegNo = input.RegNo,
+                            userId = input.UserId,
+                            PaidStatus = false,
+                            TimeStamp = DateTime.Now.TimeOfDay
+                        };
+                        regNoString = input.RegNo;
+                        regNoId = regNos8.Id;
+                        dbcontext.RegistrationNoS8.Add(regNos8);
+                        dbcontext.SaveChanges();
+                    }
+                    else
+                        return new
+                        {
+                            IsGenerated = false,
+                            RegNoId = "-1",
+                            RegNo = "-1"
+                        };
+                }
+                return new
+                {
+                    IsGenerated = true,
+                    RegNoId = regNoId,
+                    RegNo = regNoString
+                };
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+                    IsGenerated = false,
+                    RegNoId = "-1",
+                    RegNo = "-1"
                 };
             }
         }

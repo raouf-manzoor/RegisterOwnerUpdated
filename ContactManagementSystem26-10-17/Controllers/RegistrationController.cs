@@ -83,6 +83,11 @@ namespace ContactManagementSystem26_10_17.Controllers
             return new RegistrationNoAppService().GetAutoRegistrationNo(input);
         }
         [HttpPost]
+        public dynamic GetManualRegistrationNumber(GetManualRegistrationNoInput input)
+        {
+            return new RegistrationNoAppService().GetManualRegistrationNumber(input);
+        }
+        [HttpPost]
         public dynamic GetOwnedRegistrationNumbers(GetOwnedRegistrationNumbersInput input)
         {
             return new RegistrationNoAppService().GetOwnedRegistrationNumbers(input);
