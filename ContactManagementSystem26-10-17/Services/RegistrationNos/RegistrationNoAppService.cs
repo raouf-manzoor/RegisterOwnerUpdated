@@ -448,9 +448,9 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                             TimeStamp = DateTime.Now.TimeOfDay
                         };
                         regNoString = input.RegNo;
-                        regNoId = regNos1.Id;
                         dbcontext.RegistrationNoS1.Add(regNos1);
                         dbcontext.SaveChanges();
+                        regNoId = regNos1.Id;
                     }
                     else
                         return new
@@ -473,9 +473,10 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                             TimeStamp = DateTime.Now.TimeOfDay
                         };
                         regNoString = input.RegNo;
-                        regNoId = regNos2.Id;
                         dbcontext.RegistrationNoS2.Add(regNos2);
                         dbcontext.SaveChanges();
+                        regNoId = regNos2.Id;
+
                     }
                     else
                         return new
@@ -498,9 +499,10 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                             TimeStamp = DateTime.Now.TimeOfDay
                         };
                         regNoString = input.RegNo;
-                        regNoId = regNos3.Id;
                         dbcontext.RegistrationNoS3.Add(regNos3);
                         dbcontext.SaveChanges();
+                        regNoId = regNos3.Id;
+
                     }
                     else
                         return new
@@ -523,9 +525,10 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                             TimeStamp = DateTime.Now.TimeOfDay
                         };
                         regNoString = input.RegNo;
-                        regNoId = regNos4.Id;
                         dbcontext.RegistrationNoS4.Add(regNos4);
                         dbcontext.SaveChanges();
+                        regNoId = regNos4.Id;
+
                     }
                     else
                         return new
@@ -548,9 +551,10 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                             TimeStamp = DateTime.Now.TimeOfDay
                         };
                         regNoString = input.RegNo;
-                        regNoId = regNos5.Id;
                         dbcontext.RegistrationNoS5.Add(regNos5);
                         dbcontext.SaveChanges();
+                        regNoId = regNos5.Id;
+
                     }
                     else
                         return new
@@ -573,9 +577,10 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                             TimeStamp = DateTime.Now.TimeOfDay
                         };
                         regNoString = input.RegNo;
-                        regNoId = regNos6.Id;
                         dbcontext.RegistrationNoS6.Add(regNos6);
                         dbcontext.SaveChanges();
+                        regNoId = regNos6.Id;
+
                     }
                     else
                         return new
@@ -598,9 +603,10 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                             TimeStamp = DateTime.Now.TimeOfDay
                         };
                         regNoString = input.RegNo;
-                        regNoId = regNos7.Id;
                         dbcontext.RegistrationNoS7.Add(regNos7);
                         dbcontext.SaveChanges();
+                        regNoId = regNos7.Id;
+
                     }
                     else
                         return new
@@ -623,9 +629,10 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                             TimeStamp = DateTime.Now.TimeOfDay
                         };
                         regNoString = input.RegNo;
-                        regNoId = regNos8.Id;
                         dbcontext.RegistrationNoS8.Add(regNos8);
                         dbcontext.SaveChanges();
+                        regNoId = regNos8.Id;
+
                     }
                     else
                         return new
