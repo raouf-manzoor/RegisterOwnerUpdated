@@ -363,6 +363,33 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     {
                         var regNo = dbcontext.RegistrationNoS1.Single(e => e.Id == input.RegNoId);
                         regNo.userId = user.Id;
+                        var bridgeTable = dbcontext.BridgeRegNoItemsS1.Where(e => e.RegId == regNo.Id).SingleOrDefault();
+                        var itemHistory = new ItemOwnerHistory();
+                        if (bridgeTable != null)
+                        {
+                            if (bridgeTable.Item != null)
+                            {
+                                itemHistory.ItemIdMain = bridgeTable.Item.Id;
+                                itemHistory.Category = bridgeTable.Item.Category;
+                                itemHistory.DateOfPurchase = bridgeTable.Item.DateofPurchase;
+                                itemHistory.BoolItem = bridgeTable.Item.BoolItem;
+                                itemHistory.BoolPlace = bridgeTable.Item.BoolPlace;
+                                itemHistory.BoolAdress = bridgeTable.Item.BoolAdress;
+                                itemHistory.BoolFirstName = bridgeTable.Item.BoolFirstName;
+                                itemHistory.BoolLastName = bridgeTable.Item.BoolLastName;
+                                itemHistory.BoolPhoneNo = bridgeTable.Item.BoolPhoneNo;
+                                itemHistory.BoolEmail = bridgeTable.Item.BoolEmail;
+                                itemHistory.Email = user.Email;
+                                itemHistory.FirstName = user.FirstName;
+                                itemHistory.LastName = user.LastName;
+                                itemHistory.Adress = user.Adress;
+                                itemHistory.Place = user.Place;
+                                itemHistory.MobileNo = user.MobileNo;
+                                itemHistory.RegNo = regNo.RegNo;
+                                dbcontext.ItemOwnerHistories.Add(itemHistory);
+                            }
+                        }
+                        
                         dbcontext.SaveChanges();
                     }
                     else if (regNoSize == 2)
