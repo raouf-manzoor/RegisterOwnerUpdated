@@ -668,10 +668,10 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                 RegisterOwnersContext dbcontext = new RegisterOwnersContext();
                 var currentRegistrationNo = dbcontext.CurrentRegistrationNoes.First();
                 string oneDigitString = null;
-                List<int> regNoIdList = new List<int>();
-                List<string> regNoStringList = new List<string>();
+                List<MultipleAutoRegNoOutPut> multipleAutoRegistrationNoList = new List<MultipleAutoRegNoOutPut>();
+
                 var regNoId = -1;
-                for (int i = 0; i < input.Quantity; i++)
+                for (int i = 0; i < input.Quantity;)
                 {
                     if (input.Digits == 1)
                     {
@@ -696,8 +696,13 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                         dbcontext.SaveChanges();
                         var currRegNo = dbcontext.RegistrationNoS1.FirstOrDefault(e => e.RegNo == oneDigitString);
                         regNoId = currRegNo.Id;
-                        regNoIdList.Add(regNoId);
-                        regNoStringList.Add(oneDigitString);
+                        multipleAutoRegistrationNoList.Add(new MultipleAutoRegNoOutPut()
+                        {
+                            RegNo = oneDigitString,
+                            RegNoId = regNoId,
+                            IsGenerated = true
+                        });
+                        i++;
                     }
 
 
@@ -724,9 +729,13 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                         dbcontext.SaveChanges();
                         var currRegNo = dbcontext.RegistrationNoS2.FirstOrDefault(e => e.RegNo == oneDigitString);
                         regNoId = currRegNo.Id;
-                        regNoIdList.Add(regNoId);
-                        regNoStringList.Add(oneDigitString);
-
+                        multipleAutoRegistrationNoList.Add(new MultipleAutoRegNoOutPut()
+                        {
+                            RegNo = oneDigitString,
+                            RegNoId = regNoId,
+                            IsGenerated = true
+                        });
+                        i++;
                     }
                     else if (input.Digits == 3)
                     {
@@ -751,8 +760,13 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                         dbcontext.SaveChanges();
                         var currRegNo = dbcontext.RegistrationNoS3.FirstOrDefault(e => e.RegNo == oneDigitString);
                         regNoId = currRegNo.Id;
-                        regNoIdList.Add(regNoId);
-                        regNoStringList.Add(oneDigitString);
+                        multipleAutoRegistrationNoList.Add(new MultipleAutoRegNoOutPut()
+                        {
+                            RegNo = oneDigitString,
+                            RegNoId = regNoId,
+                            IsGenerated = true
+                        });
+                        i++;
                     }
 
                     else if (input.Digits == 4)
@@ -778,8 +792,13 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                         dbcontext.SaveChanges();
                         var currRegNo = dbcontext.RegistrationNoS4.FirstOrDefault(e => e.RegNo == oneDigitString);
                         regNoId = currRegNo.Id;
-                        regNoIdList.Add(regNoId);
-                        regNoStringList.Add(oneDigitString);
+                        multipleAutoRegistrationNoList.Add(new MultipleAutoRegNoOutPut()
+                        {
+                            RegNo = oneDigitString,
+                            RegNoId = regNoId,
+                            IsGenerated = true
+                        });
+                        i++;
                     }
                     else if (input.Digits == 5)
                     {
@@ -804,8 +823,13 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                         dbcontext.SaveChanges();
                         var currRegNo = dbcontext.RegistrationNoS5.FirstOrDefault(e => e.RegNo == oneDigitString);
                         regNoId = currRegNo.Id;
-                        regNoIdList.Add(regNoId);
-                        regNoStringList.Add(oneDigitString);
+                        multipleAutoRegistrationNoList.Add(new MultipleAutoRegNoOutPut()
+                        {
+                            RegNo = oneDigitString,
+                            RegNoId = regNoId,
+                            IsGenerated = true
+                        });
+                        i++;
                     }
                     else if (input.Digits == 6)
                     {
@@ -830,8 +854,13 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                         dbcontext.SaveChanges();
                         var currRegNo = dbcontext.RegistrationNoS6.FirstOrDefault(e => e.RegNo == oneDigitString);
                         regNoId = currRegNo.Id;
-                        regNoIdList.Add(regNoId);
-                        regNoStringList.Add(oneDigitString);
+                        multipleAutoRegistrationNoList.Add(new MultipleAutoRegNoOutPut()
+                        {
+                            RegNo = oneDigitString,
+                            RegNoId = regNoId,
+                            IsGenerated = true
+                        });
+                        i++;
                     }
 
 
@@ -858,8 +887,13 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                         dbcontext.SaveChanges();
                         var currRegNo = dbcontext.RegistrationNoS7.FirstOrDefault(e => e.RegNo == oneDigitString);
                         regNoId = currRegNo.Id;
-                        regNoIdList.Add(regNoId);
-                        regNoStringList.Add(oneDigitString);
+                        multipleAutoRegistrationNoList.Add(new MultipleAutoRegNoOutPut()
+                        {
+                            RegNo = oneDigitString,
+                            RegNoId = regNoId,
+                            IsGenerated = true
+                        });
+                        i++;
                     }
                     else if (input.Digits == 8)
                     {
@@ -884,17 +918,19 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                         dbcontext.SaveChanges();
                         var currRegNo = dbcontext.RegistrationNoS8.FirstOrDefault(e => e.RegNo == oneDigitString);
                         regNoId = currRegNo.Id;
-                        regNoIdList.Add(regNoId);
-                        regNoStringList.Add(oneDigitString);
+                        multipleAutoRegistrationNoList.Add(new MultipleAutoRegNoOutPut()
+                        {
+                            RegNo = oneDigitString,
+                            RegNoId = regNoId,
+                            IsGenerated = true
+                        });
+                        i++;
                     }
                 }
 
-                return new
-                {
-                    IsGenerated = true,
-                    RegNoIdList = regNoIdList,
-                    RegNoStringList = regNoStringList
-                };
+                return multipleAutoRegistrationNoList;
+
+
             }
             catch (Exception ex)
             {
@@ -907,5 +943,13 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
             }
 
         }
+    }
+
+    public class MultipleAutoRegNoOutPut
+    {
+        public int RegNoId { get; set; }
+        public string RegNo { get; set; }
+
+        public bool IsGenerated { get; set; }
     }
 }
