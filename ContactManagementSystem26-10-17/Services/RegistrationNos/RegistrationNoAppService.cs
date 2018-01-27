@@ -362,7 +362,6 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     if (regNoSize == 1)
                     {
                         var regNo = dbcontext.RegistrationNoS1.Single(e => e.Id == input.RegNoId);
-                        
                         var bridgeTable = dbcontext.BridgeRegNoItemsS1.Where(e => e.RegId == regNo.Id).SingleOrDefault();
                         var itemHistory = new ItemOwnerHistory();
                         if (bridgeTable != null)
@@ -395,42 +394,225 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     else if (regNoSize == 2)
                     {
                         var regNo = dbcontext.RegistrationNoS2.Single(e => e.Id == input.RegNoId);
+                        var bridgeTable = dbcontext.BridgeRegNoItemS2.Where(e => e.RegId == regNo.Id).SingleOrDefault();
+                        var itemHistory = new ItemOwnerHistory();
+                        if (bridgeTable != null)
+                        {
+                            if (bridgeTable.Item != null)
+                            {
+                                itemHistory.ItemIdMain = bridgeTable.Item.Id;
+                                itemHistory.Category = bridgeTable.Item.Category;
+                                itemHistory.DateOfPurchase = bridgeTable.Item.DateofPurchase;
+                                itemHistory.BoolItem = bridgeTable.Item.BoolItem;
+                                itemHistory.BoolPlace = bridgeTable.Item.BoolPlace;
+                                itemHistory.BoolAdress = bridgeTable.Item.BoolAdress;
+                                itemHistory.BoolFirstName = bridgeTable.Item.BoolFirstName;
+                                itemHistory.BoolLastName = bridgeTable.Item.BoolLastName;
+                                itemHistory.BoolPhoneNo = bridgeTable.Item.BoolPhoneNo;
+                                itemHistory.BoolEmail = bridgeTable.Item.BoolEmail;
+                                itemHistory.Email = regNo.User.Email;
+                                itemHistory.FirstName = regNo.User.FirstName;
+                                itemHistory.LastName = regNo.User.LastName;
+                                itemHistory.Adress = regNo.User.Adress;
+                                itemHistory.Place = regNo.User.Place;
+                                itemHistory.MobileNo = regNo.User.MobileNo;
+                                itemHistory.RegNo = regNo.RegNo;
+                                dbcontext.ItemOwnerHistories.Add(itemHistory);
+                            }
+                        }
                         regNo.userId = user.Id;
                         dbcontext.SaveChanges();
                     }
                     else if (regNoSize == 3)
                     {
                         var regNo = dbcontext.RegistrationNoS3.Single(e => e.Id == input.RegNoId);
+                        var bridgeTable = dbcontext.BridgeRegNoItemsS3.Where(e => e.RegId == regNo.Id).SingleOrDefault();
+                        var itemHistory = new ItemOwnerHistory();
+                        if (bridgeTable != null)
+                        {
+                            if (bridgeTable.Item != null)
+                            {
+                                itemHistory.ItemIdMain = bridgeTable.Item.Id;
+                                itemHistory.Category = bridgeTable.Item.Category;
+                                itemHistory.DateOfPurchase = bridgeTable.Item.DateofPurchase;
+                                itemHistory.BoolItem = bridgeTable.Item.BoolItem;
+                                itemHistory.BoolPlace = bridgeTable.Item.BoolPlace;
+                                itemHistory.BoolAdress = bridgeTable.Item.BoolAdress;
+                                itemHistory.BoolFirstName = bridgeTable.Item.BoolFirstName;
+                                itemHistory.BoolLastName = bridgeTable.Item.BoolLastName;
+                                itemHistory.BoolPhoneNo = bridgeTable.Item.BoolPhoneNo;
+                                itemHistory.BoolEmail = bridgeTable.Item.BoolEmail;
+                                itemHistory.Email = regNo.User.Email;
+                                itemHistory.FirstName = regNo.User.FirstName;
+                                itemHistory.LastName = regNo.User.LastName;
+                                itemHistory.Adress = regNo.User.Adress;
+                                itemHistory.Place = regNo.User.Place;
+                                itemHistory.MobileNo = regNo.User.MobileNo;
+                                itemHistory.RegNo = regNo.RegNo;
+                                dbcontext.ItemOwnerHistories.Add(itemHistory);
+                            }
+                        }
+
                         regNo.userId = user.Id;
                         dbcontext.SaveChanges();
                     }
                     else if (regNoSize == 4)
                     {
                         var regNo = dbcontext.RegistrationNoS4.Single(e => e.Id == input.RegNoId);
+                        var bridgeTable = dbcontext.BridgeRegNoItemsS4.Where(e => e.RegId == regNo.Id).SingleOrDefault();
+                        var itemHistory = new ItemOwnerHistory();
+                        if (bridgeTable != null)
+                        {
+                            if (bridgeTable.Item != null)
+                            {
+                                itemHistory.ItemIdMain = bridgeTable.Item.Id;
+                                itemHistory.Category = bridgeTable.Item.Category;
+                                itemHistory.DateOfPurchase = bridgeTable.Item.DateofPurchase;
+                                itemHistory.BoolItem = bridgeTable.Item.BoolItem;
+                                itemHistory.BoolPlace = bridgeTable.Item.BoolPlace;
+                                itemHistory.BoolAdress = bridgeTable.Item.BoolAdress;
+                                itemHistory.BoolFirstName = bridgeTable.Item.BoolFirstName;
+                                itemHistory.BoolLastName = bridgeTable.Item.BoolLastName;
+                                itemHistory.BoolPhoneNo = bridgeTable.Item.BoolPhoneNo;
+                                itemHistory.BoolEmail = bridgeTable.Item.BoolEmail;
+                                itemHistory.Email = regNo.User.Email;
+                                itemHistory.FirstName = regNo.User.FirstName;
+                                itemHistory.LastName = regNo.User.LastName;
+                                itemHistory.Adress = regNo.User.Adress;
+                                itemHistory.Place = regNo.User.Place;
+                                itemHistory.MobileNo = regNo.User.MobileNo;
+                                itemHistory.RegNo = regNo.RegNo;
+                                dbcontext.ItemOwnerHistories.Add(itemHistory);
+                            }
+                        }
                         regNo.userId = user.Id;
                         dbcontext.SaveChanges();
                     }
                     else if (regNoSize == 5)
                     {
                         var regNo = dbcontext.RegistrationNoS5.Single(e => e.Id == input.RegNoId);
+                        var bridgeTable = dbcontext.BridgeRegNoItemsS5.Where(e => e.RegId == regNo.Id).SingleOrDefault();
+                        var itemHistory = new ItemOwnerHistory();
+                        if (bridgeTable != null)
+                        {
+                            if (bridgeTable.Item != null)
+                            {
+                                itemHistory.ItemIdMain = bridgeTable.Item.Id;
+                                itemHistory.Category = bridgeTable.Item.Category;
+                                itemHistory.DateOfPurchase = bridgeTable.Item.DateofPurchase;
+                                itemHistory.BoolItem = bridgeTable.Item.BoolItem;
+                                itemHistory.BoolPlace = bridgeTable.Item.BoolPlace;
+                                itemHistory.BoolAdress = bridgeTable.Item.BoolAdress;
+                                itemHistory.BoolFirstName = bridgeTable.Item.BoolFirstName;
+                                itemHistory.BoolLastName = bridgeTable.Item.BoolLastName;
+                                itemHistory.BoolPhoneNo = bridgeTable.Item.BoolPhoneNo;
+                                itemHistory.BoolEmail = bridgeTable.Item.BoolEmail;
+                                itemHistory.Email = regNo.User.Email;
+                                itemHistory.FirstName = regNo.User.FirstName;
+                                itemHistory.LastName = regNo.User.LastName;
+                                itemHistory.Adress = regNo.User.Adress;
+                                itemHistory.Place = regNo.User.Place;
+                                itemHistory.MobileNo = regNo.User.MobileNo;
+                                itemHistory.RegNo = regNo.RegNo;
+                                dbcontext.ItemOwnerHistories.Add(itemHistory);
+                            }
+                        }
                         regNo.userId = user.Id;
                         dbcontext.SaveChanges();
                     }
                     else if (regNoSize == 6)
                     {
                         var regNo = dbcontext.RegistrationNoS6.Single(e => e.Id == input.RegNoId);
+                        var bridgeTable = dbcontext.BridgeRegNoItemsS6.Where(e => e.RegId == regNo.Id).SingleOrDefault();
+                        var itemHistory = new ItemOwnerHistory();
+                        if (bridgeTable != null)
+                        {
+                            if (bridgeTable.Item != null)
+                            {
+                                itemHistory.ItemIdMain = bridgeTable.Item.Id;
+                                itemHistory.Category = bridgeTable.Item.Category;
+                                itemHistory.DateOfPurchase = bridgeTable.Item.DateofPurchase;
+                                itemHistory.BoolItem = bridgeTable.Item.BoolItem;
+                                itemHistory.BoolPlace = bridgeTable.Item.BoolPlace;
+                                itemHistory.BoolAdress = bridgeTable.Item.BoolAdress;
+                                itemHistory.BoolFirstName = bridgeTable.Item.BoolFirstName;
+                                itemHistory.BoolLastName = bridgeTable.Item.BoolLastName;
+                                itemHistory.BoolPhoneNo = bridgeTable.Item.BoolPhoneNo;
+                                itemHistory.BoolEmail = bridgeTable.Item.BoolEmail;
+                                itemHistory.Email = regNo.User.Email;
+                                itemHistory.FirstName = regNo.User.FirstName;
+                                itemHistory.LastName = regNo.User.LastName;
+                                itemHistory.Adress = regNo.User.Adress;
+                                itemHistory.Place = regNo.User.Place;
+                                itemHistory.MobileNo = regNo.User.MobileNo;
+                                itemHistory.RegNo = regNo.RegNo;
+                                dbcontext.ItemOwnerHistories.Add(itemHistory);
+                            }
+                        }
                         regNo.userId = user.Id;
                         dbcontext.SaveChanges();
                     }
                     else if (regNoSize == 7)
                     {
                         var regNo = dbcontext.RegistrationNoS7.Single(e => e.Id == input.RegNoId);
+                        var bridgeTable = dbcontext.BridgeRegNoItemsS7.Where(e => e.RegId == regNo.Id).SingleOrDefault();
+                        var itemHistory = new ItemOwnerHistory();
+                        if (bridgeTable != null)
+                        {
+                            if (bridgeTable.Item != null)
+                            {
+                                itemHistory.ItemIdMain = bridgeTable.Item.Id;
+                                itemHistory.Category = bridgeTable.Item.Category;
+                                itemHistory.DateOfPurchase = bridgeTable.Item.DateofPurchase;
+                                itemHistory.BoolItem = bridgeTable.Item.BoolItem;
+                                itemHistory.BoolPlace = bridgeTable.Item.BoolPlace;
+                                itemHistory.BoolAdress = bridgeTable.Item.BoolAdress;
+                                itemHistory.BoolFirstName = bridgeTable.Item.BoolFirstName;
+                                itemHistory.BoolLastName = bridgeTable.Item.BoolLastName;
+                                itemHistory.BoolPhoneNo = bridgeTable.Item.BoolPhoneNo;
+                                itemHistory.BoolEmail = bridgeTable.Item.BoolEmail;
+                                itemHistory.Email = regNo.User.Email;
+                                itemHistory.FirstName = regNo.User.FirstName;
+                                itemHistory.LastName = regNo.User.LastName;
+                                itemHistory.Adress = regNo.User.Adress;
+                                itemHistory.Place = regNo.User.Place;
+                                itemHistory.MobileNo = regNo.User.MobileNo;
+                                itemHistory.RegNo = regNo.RegNo;
+                                dbcontext.ItemOwnerHistories.Add(itemHistory);
+                            }
+                        }
                         regNo.userId = user.Id;
                         dbcontext.SaveChanges();
                     }
                     else if (regNoSize == 8)
                     {
                         var regNo = dbcontext.RegistrationNoS8.Single(e => e.Id == input.RegNoId);
+                        var bridgeTable = dbcontext.BridgeRegNosItemS8.Where(e => e.RegId == regNo.Id).SingleOrDefault();
+                        var itemHistory = new ItemOwnerHistory();
+                        if (bridgeTable != null)
+                        {
+                            if (bridgeTable.Item != null)
+                            {
+                                itemHistory.ItemIdMain = bridgeTable.Item.Id;
+                                itemHistory.Category = bridgeTable.Item.Category;
+                                itemHistory.DateOfPurchase = bridgeTable.Item.DateofPurchase;
+                                itemHistory.BoolItem = bridgeTable.Item.BoolItem;
+                                itemHistory.BoolPlace = bridgeTable.Item.BoolPlace;
+                                itemHistory.BoolAdress = bridgeTable.Item.BoolAdress;
+                                itemHistory.BoolFirstName = bridgeTable.Item.BoolFirstName;
+                                itemHistory.BoolLastName = bridgeTable.Item.BoolLastName;
+                                itemHistory.BoolPhoneNo = bridgeTable.Item.BoolPhoneNo;
+                                itemHistory.BoolEmail = bridgeTable.Item.BoolEmail;
+                                itemHistory.Email = regNo.User.Email;
+                                itemHistory.FirstName = regNo.User.FirstName;
+                                itemHistory.LastName = regNo.User.LastName;
+                                itemHistory.Adress = regNo.User.Adress;
+                                itemHistory.Place = regNo.User.Place;
+                                itemHistory.MobileNo = regNo.User.MobileNo;
+                                itemHistory.RegNo = regNo.RegNo;
+                                dbcontext.ItemOwnerHistories.Add(itemHistory);
+                            }
+                        }
                         regNo.userId = user.Id;
                         dbcontext.SaveChanges();
                     }
