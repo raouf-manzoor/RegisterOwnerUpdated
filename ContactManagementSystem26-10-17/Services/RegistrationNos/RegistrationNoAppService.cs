@@ -362,7 +362,7 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                     if (regNoSize == 1)
                     {
                         var regNo = dbcontext.RegistrationNoS1.Single(e => e.Id == input.RegNoId);
-                        regNo.userId = user.Id;
+                        
                         var bridgeTable = dbcontext.BridgeRegNoItemsS1.Where(e => e.RegId == regNo.Id).SingleOrDefault();
                         var itemHistory = new ItemOwnerHistory();
                         if (bridgeTable != null)
@@ -379,17 +379,17 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
                                 itemHistory.BoolLastName = bridgeTable.Item.BoolLastName;
                                 itemHistory.BoolPhoneNo = bridgeTable.Item.BoolPhoneNo;
                                 itemHistory.BoolEmail = bridgeTable.Item.BoolEmail;
-                                itemHistory.Email = user.Email;
-                                itemHistory.FirstName = user.FirstName;
-                                itemHistory.LastName = user.LastName;
-                                itemHistory.Adress = user.Adress;
-                                itemHistory.Place = user.Place;
-                                itemHistory.MobileNo = user.MobileNo;
+                                itemHistory.Email = regNo.User.Email;
+                                itemHistory.FirstName = regNo.User.FirstName;
+                                itemHistory.LastName = regNo.User.LastName;
+                                itemHistory.Adress = regNo.User.Adress;
+                                itemHistory.Place = regNo.User.Place;
+                                itemHistory.MobileNo = regNo.User.MobileNo;
                                 itemHistory.RegNo = regNo.RegNo;
                                 dbcontext.ItemOwnerHistories.Add(itemHistory);
                             }
                         }
-                        
+                        regNo.userId = user.Id;
                         dbcontext.SaveChanges();
                     }
                     else if (regNoSize == 2)
