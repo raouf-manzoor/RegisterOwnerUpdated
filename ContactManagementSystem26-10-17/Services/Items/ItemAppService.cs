@@ -143,6 +143,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
                 {
                     UserId = regNo.userId,
                     Item = item != null ? Mapper.Map<Item, ItemDto>(item) : null,
+                    User = Mapper.Map<User, UserDto>(regNo.User),
                 };
             }
             else if (input.RegNo.Length == 3)
@@ -157,6 +158,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
                 {
                     UserId = regNo.userId,
                     Item = item != null ? Mapper.Map<Item, ItemDto>(item) : null,
+                    User = Mapper.Map<User, UserDto>(regNo.User),
                 };
             }
             else if (input.RegNo.Length == 4)
@@ -171,6 +173,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
                 {
                     UserId = regNo.userId,
                     Item = item != null ? Mapper.Map<Item, ItemDto>(item) : null,
+                    User = Mapper.Map<User, UserDto>(regNo.User),
                 };
             }
             else if (input.RegNo.Length == 5)
@@ -185,6 +188,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
                 {
                     UserId = regNo.userId,
                     Item = item != null ? Mapper.Map<Item, ItemDto>(item) : null,
+                    User = Mapper.Map<User, UserDto>(regNo.User),
                 };
             }
             else if (input.RegNo.Length == 6)
@@ -199,6 +203,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
                 {
                     UserId = regNo.userId,
                     Item = item != null ? Mapper.Map<Item, ItemDto>(item) : null,
+                    User = Mapper.Map<User, UserDto>(regNo.User),
                 };
             }
             else if (input.RegNo.Length == 7)
@@ -213,6 +218,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
                 {
                     UserId = regNo.userId,
                     Item = item != null ? Mapper.Map<Item, ItemDto>(item) : null,
+                    User = Mapper.Map<User, UserDto>(regNo.User),
                 };
             }
             else if (input.RegNo.Length == 8)
@@ -227,6 +233,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
                 {
                     UserId = regNo.userId,
                     Item = item != null ? Mapper.Map<Item, ItemDto>(item) : null,
+                    User = Mapper.Map<User, UserDto>(regNo.User),
                 };
             }
             return null;
