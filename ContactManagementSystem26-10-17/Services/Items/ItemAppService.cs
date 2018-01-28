@@ -332,10 +332,11 @@ namespace ContactManagementSystem26_10_17.Services.Items
 
         }
 
-        public dynamic GetItemDetailsUsingByItemId(GetItemDetailsUsingItemIdInput input)
+        public dynamic GetItemDetailsUsingByItemId(GetItemDetailsUsingItemIdInput [] input)
         {
             RegisterOwnersContext dbcontext = new RegisterOwnersContext();
-            var listOfData = dbcontext.Items.Where(e => e.ItemId == input.ItemId).Select(
+            var inputItemId = input[0].ItemId;
+            var listOfData = dbcontext.Items.Where(e => e.ItemId == inputItemId).Select(
                 e => new GetItemDetailsUsingSerialNoOutput()
                 {
                     Item = e,

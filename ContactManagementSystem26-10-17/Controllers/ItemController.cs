@@ -25,7 +25,7 @@ namespace ContactManagementSystem26_10_17.Controllers
             return new ItemAppService().GetItemDetailsUsingSerialNo(input);
         }
         [HttpPost]
-        public dynamic GetItemDetailsUsingByItemId(GetItemDetailsUsingItemIdInput input)
+        public dynamic GetItemDetailsUsingByItemId(GetItemDetailsUsingItemIdInput [] input)
         {
             return new ItemAppService().GetItemDetailsUsingByItemId(input);
         }
