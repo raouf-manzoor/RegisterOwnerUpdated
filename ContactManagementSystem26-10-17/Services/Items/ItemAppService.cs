@@ -239,10 +239,11 @@ namespace ContactManagementSystem26_10_17.Services.Items
             return null;
 
         }
-        public dynamic GetItemDetailsUsingSerialNo(GetItemDetailsUsingSerialNoInput input)
+        public dynamic GetItemDetailsUsingSerialNo(GetItemDetailsUsingSerialNoInput [] input)
         {
             RegisterOwnersContext dbcontext = new RegisterOwnersContext();
-            var listOfData = dbcontext.Items.Where(e => e.ItemSerial == input.SerialNo).Select(
+            var inputSerialNo = input[0].SerialNo;
+            var listOfData = dbcontext.Items.Where(e => e.ItemSerial == inputSerialNo).Select(
                 e => new GetItemDetailsUsingSerialNoOutput()
                 {
                     Item = e,
