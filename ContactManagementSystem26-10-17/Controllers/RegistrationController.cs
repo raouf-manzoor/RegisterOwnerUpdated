@@ -159,13 +159,33 @@ namespace ContactManagementSystem26_10_17.Controllers
 
 
         [HttpPost]
-        public void ForgotPassword(ForgotPasswordInput input)
+        public dynamic ForgotPassword(ForgotPasswordInput input)
         {
             // ForGot Pass
-            var dbcontext = new RegisterOwnersContext();
-            var user = dbcontext.Users.Single(e => e.Email == input.Email);
-            string url = " <a href=http://registerownertest.apphb.com/Home/ForgotPassword?Id=" + user.Id + ">" + "Forgot Password" + "</a>";
-            SendEmail(input.Email, url);
+            try
+            {
+                var dbcontext = new RegisterOwnersContext();
+                var user = dbcontext.Users.Single(e => e.Email == input.Email);
+                string url = " <a href=http://registerownertest.apphb.com/Home/ForgotPassword?Id=" + user.Id + ">" + "Forgot Password" + "</a>";
+                SendEmail(input.Email, url);
+                return new
+                {
+
+                    emailSent = true
+                };
+
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+
+                    emailSent = false
+                };
+
+
+            }
+
 
         }
 
