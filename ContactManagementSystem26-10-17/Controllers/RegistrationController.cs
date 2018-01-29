@@ -170,7 +170,7 @@ namespace ContactManagementSystem26_10_17.Controllers
         }
 
 
-        public bool ChangePassword(User input)
+        public dynamic ChangePassword(User input)
         {
             try
             {
@@ -178,11 +178,18 @@ namespace ContactManagementSystem26_10_17.Controllers
                 var user = dbcontext.Users.Single(e => e.IsEmailVerified == true && e.Id == input.Id);
                 user.Password = input.Password;
                 dbcontext.SaveChanges();
-                return true;
+
+                return new
+                {
+                    passwordChanged = true
+                };
             }
             catch
             {
-                return false;
+                return new
+                {
+                    passwordChanged = false
+                };
             }
 
         }
