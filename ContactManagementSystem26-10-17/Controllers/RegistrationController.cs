@@ -84,7 +84,7 @@ namespace ContactManagementSystem26_10_17.Controllers
         }
 
         [HttpPost]
-        public dynamic GetMultipleAutoRegistrationNo(GetMultipleRegistrationNoInput input)
+        public dynamic GetMultipleAutoRegistrationNo(GetMultipleRegistrationNoInput [] input)
         {
             return new RegistrationNoAppService().GetMultipleAutoRegistrationNo(input);
         }

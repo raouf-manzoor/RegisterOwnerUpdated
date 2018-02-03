@@ -869,8 +869,10 @@ namespace ContactManagementSystem26_10_17.Services.RegistrationNos
             }
         }
 
-        public dynamic GetMultipleAutoRegistrationNo(GetMultipleRegistrationNoInput input)
+        public dynamic GetMultipleAutoRegistrationNo(GetMultipleRegistrationNoInput [] inputt)
         {
+            GetMultipleRegistrationNoInput input = inputt[0];
+
             try
             {
 
