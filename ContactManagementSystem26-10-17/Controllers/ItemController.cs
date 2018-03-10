@@ -34,6 +34,11 @@ namespace ContactManagementSystem26_10_17.Controllers
         {
             return new ItemAppService().DeleteItemHistory(input);
         }
+        [HttpPost]
+        public dynamic CleanRegistrationNumber(DeleteItemHistoryInput input)
+        {
+            return new ItemAppService().CleanRegistrationNumber(input);
+        }
     }
 
 
