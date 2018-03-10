@@ -636,7 +636,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
 
                 return new
                 {
-                    IsDeleted = true,
+                    IsCleaned = true,
                     Message = "Record Deleted"
 
                 };
@@ -645,7 +645,48 @@ namespace ContactManagementSystem26_10_17.Services.Items
             {
                 return new
                 {
-                    IsDeleted = false,
+                    IsCleaned = false,
+                    Message = "Error",
+                    ErrorException = ex
+                };
+
+            };
+        }
+
+        public dynamic UpdateItem(UpdateItemInput input)
+        {
+            try
+            {
+                var dbcontext = new RegisterOwnersContext();
+                var itemToUpdate = dbcontext.Items.Single(e => e.Id == input.Item.Id);
+                itemToUpdate.Category = input.Item.Category;
+                itemToUpdate.Type = input.Item.Type;
+                itemToUpdate.Producer = input.Item.Producer;
+                itemToUpdate.Model = input.Item.Model;
+                itemToUpdate.ItemId = input.Item.ItemId;
+                itemToUpdate.ItemSerial = input.Item.ItemSerial;
+                itemToUpdate.OtherInfo = input.Item.OtherInfo;
+                itemToUpdate.DateofPurchase = input.Item.DateofPurchase;
+                itemToUpdate.BoolPlace = input.Item.BoolPlace;
+                itemToUpdate.BoolItem = input.Item.BoolItem;
+                itemToUpdate.BoolAdress = input.Item.BoolAdress;
+                itemToUpdate.BoolFirstName = input.Item.BoolFirstName;
+                itemToUpdate.BoolPhoneNo = input.Item.BoolPhoneNo;
+                itemToUpdate.BoolLastName = input.Item.BoolLastName;
+                itemToUpdate.BoolEmail = input.Item.BoolEmail;
+                itemToUpdate.BoolReceipt = input.Item.BoolReceipt;
+                dbcontext.SaveChanges();
+                return new
+                {
+                    IsUpdated = true,
+                    Message = "Updated SuccessFully",
+                };
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+                    IsUpdated = false,
                     Message = "Error",
                     ErrorException = ex
                 };

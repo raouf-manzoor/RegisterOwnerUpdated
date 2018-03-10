@@ -39,6 +39,12 @@ namespace ContactManagementSystem26_10_17.Controllers
         {
             return new ItemAppService().CleanRegistrationNumber(input);
         }
+
+        [HttpPost]
+        public dynamic UpdateItem(UpdateItemInput input)
+        {
+            return new ItemAppService().UpdateItem(input);
+        }
     }
 
 

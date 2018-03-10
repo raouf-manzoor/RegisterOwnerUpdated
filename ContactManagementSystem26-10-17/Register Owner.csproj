@@ -272,6 +272,7 @@
     <Compile Include="Services\Items\Dtos\GetItemDetailsUsingRegistrationNoInput.cs" />
     <Compile Include="Services\Items\Dtos\GetItemDetailsUsingSerialNoOutput.cs" />
     <Compile Include="Services\Items\Dtos\ItemDto.cs" />
+    <Compile Include="Services\Items\Dtos\UpdateItemInput.cs" />
     <Compile Include="Services\Items\ItemAppService.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetOwnedRegistrationNumbersInput.cs" />
     <Compile Include="Services\RegistrationNos\Dtos\GetOwnedRegistrationNumbersOutput.cs" />
