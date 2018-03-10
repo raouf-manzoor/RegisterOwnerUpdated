@@ -239,7 +239,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
             return null;
 
         }
-        public dynamic GetItemDetailsUsingSerialNo(GetItemDetailsUsingSerialNoInput [] input)
+        public dynamic GetItemDetailsUsingSerialNo(GetItemDetailsUsingSerialNoInput[] input)
         {
             RegisterOwnersContext dbcontext = new RegisterOwnersContext();
             var inputSerialNo = input[0].SerialNo;
@@ -332,7 +332,7 @@ namespace ContactManagementSystem26_10_17.Services.Items
 
         }
 
-        public dynamic GetItemDetailsUsingByItemId(GetItemDetailsUsingItemIdInput [] input)
+        public dynamic GetItemDetailsUsingByItemId(GetItemDetailsUsingItemIdInput[] input)
         {
             RegisterOwnersContext dbcontext = new RegisterOwnersContext();
             var inputItemId = input[0].ItemId;
@@ -482,6 +482,153 @@ namespace ContactManagementSystem26_10_17.Services.Items
                 else if (regNoSize == 8)
                 {
                     var regNo = dbcontext.BridgeRegNosItemS8.Single(e => e.RegId == input.RegNoId);
+                    dbcontext.Items.Remove(regNo.Item);
+                    dbcontext.BridgeRegNosItemS8.Remove(regNo);
+                    dbcontext.SaveChanges();
+                }
+
+                return new
+                {
+                    IsDeleted = true,
+                    Message = "Record Deleted"
+
+                };
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+                    IsDeleted = false,
+                    Message = "Error",
+                    ErrorException = ex
+                };
+
+            };
+        }
+
+        public dynamic CleanRegistrationNumber(DeleteItemHistoryInput input)
+        {
+            try
+            {
+                var dbcontext = new RegisterOwnersContext();
+                var regNoSize = input.RegNo.Length;
+                if (regNoSize == 1)
+                {
+                    var regNo = dbcontext.BridgeRegNoItemsS1.Single(e => e.RegId == input.RegNoId);
+                    var listOfitemHistory = dbcontext.ItemOwnerHistories.Where(e => e.RegNo == input.RegNo).ToList();
+                    if (listOfitemHistory.Count > 0)
+                    {
+                        listOfitemHistory.ForEach(e =>
+                        {
+                            dbcontext.ItemOwnerHistories.Remove(e);
+                        });
+                    }
+
+                    dbcontext.Items.Remove(regNo.Item);
+                    dbcontext.BridgeRegNoItemsS1.Remove(regNo);
+                    dbcontext.SaveChanges();
+                }
+                else if (regNoSize == 2)
+                {
+                    var regNo = dbcontext.BridgeRegNoItemS2.Single(e => e.RegId == input.RegNoId);
+                    var listOfitemHistory = dbcontext.ItemOwnerHistories.Where(e => e.RegNo == input.RegNo).ToList();
+                    if (listOfitemHistory.Count > 0)
+                    {
+                        listOfitemHistory.ForEach(e =>
+                        {
+                            dbcontext.ItemOwnerHistories.Remove(e);
+                        });
+                    }
+                    dbcontext.Items.Remove(regNo.Item);
+                    dbcontext.BridgeRegNoItemS2.Remove(regNo);
+                    dbcontext.SaveChanges();
+                }
+                else if (regNoSize == 3)
+                {
+                    var regNo = dbcontext.BridgeRegNoItemsS3.Single(e => e.RegId == input.RegNoId);
+                    var listOfitemHistory = dbcontext.ItemOwnerHistories.Where(e => e.RegNo == input.RegNo).ToList();
+                    if (listOfitemHistory.Count > 0)
+                    {
+                        listOfitemHistory.ForEach(e =>
+                        {
+                            dbcontext.ItemOwnerHistories.Remove(e);
+                        });
+                    }
+                    dbcontext.Items.Remove(regNo.Item);
+                    dbcontext.BridgeRegNoItemsS3.Remove(regNo);
+                    dbcontext.SaveChanges();
+                }
+                else if (regNoSize == 4)
+                {
+                    var regNo = dbcontext.BridgeRegNoItemsS4.Single(e => e.RegId == input.RegNoId);
+                    var listOfitemHistory = dbcontext.ItemOwnerHistories.Where(e => e.RegNo == input.RegNo).ToList();
+                    if (listOfitemHistory.Count > 0)
+                    {
+                        listOfitemHistory.ForEach(e =>
+                        {
+                            dbcontext.ItemOwnerHistories.Remove(e);
+                        });
+                    }
+                    dbcontext.Items.Remove(regNo.Item);
+                    dbcontext.BridgeRegNoItemsS4.Remove(regNo);
+                    dbcontext.SaveChanges();
+                }
+                else if (regNoSize == 5)
+                {
+                    var regNo = dbcontext.BridgeRegNoItemsS5.Single(e => e.RegId == input.RegNoId);
+                    var listOfitemHistory = dbcontext.ItemOwnerHistories.Where(e => e.RegNo == input.RegNo).ToList();
+                    if (listOfitemHistory.Count > 0)
+                    {
+                        listOfitemHistory.ForEach(e =>
+                        {
+                            dbcontext.ItemOwnerHistories.Remove(e);
+                        });
+                    }
+                    dbcontext.Items.Remove(regNo.Item);
+                    dbcontext.BridgeRegNoItemsS5.Remove(regNo);
+                    dbcontext.SaveChanges();
+                }
+                else if (regNoSize == 6)
+                {
+                    var regNo = dbcontext.BridgeRegNoItemsS6.Single(e => e.RegId == input.RegNoId);
+                    var listOfitemHistory = dbcontext.ItemOwnerHistories.Where(e => e.RegNo == input.RegNo).ToList();
+                    if (listOfitemHistory.Count > 0)
+                    {
+                        listOfitemHistory.ForEach(e =>
+                        {
+                            dbcontext.ItemOwnerHistories.Remove(e);
+                        });
+                    }
+                    dbcontext.Items.Remove(regNo.Item);
+                    dbcontext.BridgeRegNoItemsS6.Remove(regNo);
+                    dbcontext.SaveChanges();
+                }
+                else if (regNoSize == 7)
+                {
+                    var regNo = dbcontext.BridgeRegNoItemsS7.Single(e => e.RegId == input.RegNoId);
+                    var listOfitemHistory = dbcontext.ItemOwnerHistories.Where(e => e.RegNo == input.RegNo).ToList();
+                    if (listOfitemHistory.Count > 0)
+                    {
+                        listOfitemHistory.ForEach(e =>
+                        {
+                            dbcontext.ItemOwnerHistories.Remove(e);
+                        });
+                    }
+                    dbcontext.Items.Remove(regNo.Item);
+                    dbcontext.BridgeRegNoItemsS7.Remove(regNo);
+                    dbcontext.SaveChanges();
+                }
+                else if (regNoSize == 8)
+                {
+                    var regNo = dbcontext.BridgeRegNosItemS8.Single(e => e.RegId == input.RegNoId);
+                    var listOfitemHistory = dbcontext.ItemOwnerHistories.Where(e => e.RegNo == input.RegNo).ToList();
+                    if (listOfitemHistory.Count > 0)
+                    {
+                        listOfitemHistory.ForEach(e =>
+                        {
+                            dbcontext.ItemOwnerHistories.Remove(e);
+                        });
+                    }
                     dbcontext.Items.Remove(regNo.Item);
                     dbcontext.BridgeRegNosItemS8.Remove(regNo);
                     dbcontext.SaveChanges();
