@@ -694,10 +694,18 @@ namespace ContactManagementSystem26_10_17.Services.Items
             };
         }
 
-        public dynamic ItemHistoryBySerialNo(DeleteItemHistoryInput input)
+        public dynamic ItemHistoryBySerialNo(DeleteItemHistoryInput[] input)
         {
             var dbcontext = new RegisterOwnersContext();
-            return dbcontext.ItemOwnerHistories.Where(e => e.RegNo == input.RegNo).ToList();
+            var inputRegNo = input[0].RegNo;
+            return dbcontext.ItemOwnerHistories.Where(e => e.RegNo == inputRegNo).ToList();
         }
     }
 }
+
+
+//        public dynamic GetItemDetailsUsingSerialNo(GetItemDetailsUsingSerialNoInput[] input)
+//        {
+//            RegisterOwnersContext dbcontext = new RegisterOwnersContext();
+//var inputSerialNo = input[0].SerialNo;
+//var listOfData = dbcontext.Items.Where(e => e.ItemSerial == inputSerialNo).Select(

@@ -46,7 +46,7 @@ namespace ContactManagementSystem26_10_17.Controllers
             return new ItemAppService().UpdateItem(input);
         }
         [HttpPost]
-        public dynamic ItemHistoryBySerialNo(DeleteItemHistoryInput input)
+        public dynamic ItemHistoryBySerialNo(DeleteItemHistoryInput [] input)
 
         {
             return new ItemAppService().ItemHistoryBySerialNo(input);
