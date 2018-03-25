@@ -693,5 +693,11 @@ namespace ContactManagementSystem26_10_17.Services.Items
 
             };
         }
+
+        public dynamic ItemHistoryBySerialNo(DeleteItemHistoryInput input)
+        {
+            var dbcontext = new RegisterOwnersContext();
+            return dbcontext.ItemOwnerHistories.Where(e => e.RegNo == input.RegNo).ToList();
+        }
     }
 }
