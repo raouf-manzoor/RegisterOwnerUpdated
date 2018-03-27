@@ -41,7 +41,7 @@ namespace ContactManagementSystem26_10_17.Controllers
         }
 
         [HttpPost]
-        public dynamic UpdateItem(UpdateItemInput input)
+        public dynamic UpdateItem(RegisterOwnerDataBase.Item input)
         {
             return new ItemAppService().UpdateItem(input);
         }

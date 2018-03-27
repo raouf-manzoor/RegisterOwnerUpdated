@@ -653,28 +653,28 @@ namespace ContactManagementSystem26_10_17.Services.Items
             };
         }
 
-        public dynamic UpdateItem(UpdateItemInput input)
+        public dynamic UpdateItem(Item input)
         {
             try
             {
                 var dbcontext = new RegisterOwnersContext();
-                var itemToUpdate = dbcontext.Items.Single(e => e.Id == input.Item.Id);
-                itemToUpdate.Category = input.Item.Category;
-                itemToUpdate.Type = input.Item.Type;
-                itemToUpdate.Producer = input.Item.Producer;
-                itemToUpdate.Model = input.Item.Model;
-                itemToUpdate.ItemId = input.Item.ItemId;
-                itemToUpdate.ItemSerial = input.Item.ItemSerial;
-                itemToUpdate.OtherInfo = input.Item.OtherInfo;
-                itemToUpdate.DateofPurchase = input.Item.DateofPurchase;
-                itemToUpdate.BoolPlace = input.Item.BoolPlace;
-                itemToUpdate.BoolItem = input.Item.BoolItem;
-                itemToUpdate.BoolAdress = input.Item.BoolAdress;
-                itemToUpdate.BoolFirstName = input.Item.BoolFirstName;
-                itemToUpdate.BoolPhoneNo = input.Item.BoolPhoneNo;
-                itemToUpdate.BoolLastName = input.Item.BoolLastName;
-                itemToUpdate.BoolEmail = input.Item.BoolEmail;
-                itemToUpdate.BoolReceipt = input.Item.BoolReceipt;
+                var itemToUpdate = dbcontext.Items.Single(e => e.Id == input.Id);
+                itemToUpdate.Category = input.Category;
+                itemToUpdate.Type = input.Type;
+                itemToUpdate.Producer = input.Producer;
+                itemToUpdate.Model = input.Model;
+                itemToUpdate.ItemId = input.ItemId;
+                itemToUpdate.ItemSerial = input.ItemSerial;
+                itemToUpdate.OtherInfo = input.OtherInfo;
+                itemToUpdate.DateofPurchase = input.DateofPurchase;
+                itemToUpdate.BoolPlace = input.BoolPlace;
+                itemToUpdate.BoolItem = input.BoolItem;
+                itemToUpdate.BoolAdress = input.BoolAdress;
+                itemToUpdate.BoolFirstName = input.BoolFirstName;
+                itemToUpdate.BoolPhoneNo = input.BoolPhoneNo;
+                itemToUpdate.BoolLastName = input.BoolLastName;
+                itemToUpdate.BoolEmail = input.BoolEmail;
+                itemToUpdate.BoolReceipt = input.BoolReceipt;
                 dbcontext.SaveChanges();
                 return new
                 {
